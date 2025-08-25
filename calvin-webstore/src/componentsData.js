@@ -2,7 +2,13 @@ export const components = [
   {
     type: "CPU",
     name: "AMD Ryzen 7 9800X3D",
-    listings: [
+    image: "/images/parts/cpu/9800X3D.jpg",
+    cores: "8C, 16T",
+    clock: "4.7GHz, 5.2GHz Boost",
+    architecture: "AM5",
+    tdp: "120W",
+    graphics: "Radeon",
+    retailers: [
       { site: "Amazon", priceCents: 47999 },
       { site: "Newegg", priceCents: 47999 },
       { site: "Micro Center", priceCents: 47999 },
@@ -12,7 +18,13 @@ export const components = [
   {
     type: "CPU",
     name: "AMD Ryzen 7 9700X",
-    listings: [
+    image: "/images/parts/cpu/9700X.jpg",
+    cores: "8C, 16T",
+    clock: "3.8GHz, 5.5GHz Boost",
+    architecture: "AM5",
+    tdp: "65W",
+    graphics: "Radeon",
+    retailers: [
       { site: "Amazon", priceCents: 27999 },
       { site: "Newegg", priceCents: 27999 },
       { site: "Micro Center", priceCents: 27999 },
@@ -22,7 +34,13 @@ export const components = [
   {
     type: "CPU",
     name: "AMD Ryzen 5 9600X",
-    listings: [
+    image: "/images/parts/cpu/9600X.jpg",
+    cores: "6C, 12T",
+    clock: "3.9GHz, 5.4GHz Boost",
+    architecture: "AM5",
+    tdp: "65W",
+    graphics: "Radeon",
+    retailers: [
       { site: "Amazon", priceCents: 17999 },
       { site: "Newegg", priceCents: 17999 },
       { site: "Micro Center", priceCents: 17999 },
@@ -32,7 +50,13 @@ export const components = [
   {
     type: "CPU",
     name: "Intel Core Ultra 9 285K",
-    listings: [
+    image: "/images/parts/cpu/285K.jpg",
+    cores: "6C, 12T",
+    clock: "3.9GHz, 5.4GHz Boost",
+    architecture: "AM5",
+    tdp: "65W",
+    graphics: "Radeon",
+    retailers: [
       { site: "Amazon", priceCents: 52999 },
       { site: "Newegg", priceCents: 52999 },
       { site: "Micro Center", priceCents: 52999 },
@@ -42,7 +66,13 @@ export const components = [
   {
     type: "CPU",
     name: "Intel Core Ultra 7 265K",
-    listings: [
+    image: "/images/parts/cpu/265K.jpg",
+    cores: "6C, 12T",
+    clock: "3.9GHz, 5.4GHz Boost",
+    architecture: "AM5",
+    tdp: "65W",
+    graphics: "Radeon",
+    retailers: [
       { site: "Amazon", priceCents: 25999 },
       { site: "Newegg", priceCents: 25999 },
       { site: "Micro Center", priceCents: 25999 },
@@ -52,7 +82,13 @@ export const components = [
   {
     type: "CPU",
     name: "Intel Core Ultra 5 245K",
-    listings: [
+    image: "/images/parts/cpu/245K.jpg",
+    cores: "6C, 12T",
+    clock: "3.9GHz, 5.4GHz Boost",
+    architecture: "AM5",
+    tdp: "65W",
+    graphics: "Radeon",
+    retailers: [
       { site: "Amazon", priceCents: 23999 },
       { site: "Newegg", priceCents: 23999 },
       { site: "Micro Center", priceCents: 23999 },

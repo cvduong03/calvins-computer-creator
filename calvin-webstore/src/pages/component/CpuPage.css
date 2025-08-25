@@ -1,0 +1,37 @@
+.td-product-image {
+  width: 50px;
+}
+
+/* Setting width of each component column */
+.th-name,
+.td-name {
+  width: 20%;
+}
+.th-core-count,
+.td-core-count {
+  width: 10%;
+}
+.th-core-clock,
+.td-core-clock {
+  width: 20%;
+}
+.th-architecture,
+.td-architecture {
+  width: 10%;
+}
+.th-tdp,
+.td-tdp {
+  width: 10%;
+}
+.th-graphics,
+.td-graphics {
+  width: 15%;
+}
+.th-retailer,
+.td-retailer {
+  width: 10%;
+}
+.th-add,
+.td-add {
+  width: 5%;
+}

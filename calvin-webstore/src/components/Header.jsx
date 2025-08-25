@@ -44,8 +44,6 @@ export function Header() {
           </a>
         </div>
       </div>
-
-      <h1 className="title-note">Choose your parts</h1>
     </>
   );
 }

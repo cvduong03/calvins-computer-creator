@@ -24,10 +24,10 @@ export function PartsTable() {
           <tbody>
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">CPU</a>
+                <a href="/product/cpu">CPU</a>
               </td>
               <td className="td-selection">
-                <a className="choose-button" href="">
+                <a className="choose-button" href="/product/cpu">
                   + Choose a CPU
                 </a>
               </td>

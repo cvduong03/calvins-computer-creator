@@ -59,8 +59,15 @@ td {
   background-color: rgb(40, 132, 190);
   color: white;
 
-  padding: 4px 6px;
+  padding: 6px;
 
-  border: none;
   border-radius: 4px;
+}
+
+.choose-button:hover {
+  background-color: rgb(36, 123, 177);
+}
+
+.choose-button:active {
+  background-color: rgb(26, 87, 125);
 }
