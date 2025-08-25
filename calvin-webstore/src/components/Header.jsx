@@ -1,6 +1,6 @@
-import "./header.css";
+import "./Header.css";
 
-export function HomePage() {
+export function Header() {
   return (
     <>
       <div className="header">
@@ -8,20 +8,26 @@ export function HomePage() {
           <a href="" className="link">
             <img className="c-logo" src="/images/c-logo.png" />
           </a>
+          <a href="" className="link">
+            <img className="c-logo" src="/images/c-logo.png" />
+          </a>
+          <a href="" className="link">
+            <img className="c-logo" src="/images/c-logo.png" />
+          </a>
         </div>
 
         <div className="middle-header">
           <a href="" className="link">
-            <span className="phones-link">Phones</span>
+            <span className="phones-link">Build</span>
           </a>
           <a href="" className="link">
-            <span className="computers-link">Computers</span>
+            <span className="computers-link">Parts</span>
           </a>
           <a href="" className="link">
-            <span className="displays-link">Displays</span>
+            <span className="displays-link">Guides</span>
           </a>
           <a href="" className="link">
-            <span className="audio-link">Audio</span>
+            <span className="audio-link">Showcase</span>
           </a>
           <a href="" className="link">
             <img className="search-icon" src="/images/search-icon.png" />
@@ -38,6 +44,8 @@ export function HomePage() {
           </a>
         </div>
       </div>
+
+      <h1 className="title-note">Choose your parts</h1>
     </>
   );
 }

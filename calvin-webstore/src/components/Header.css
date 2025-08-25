@@ -18,13 +18,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-left: 20px;
+
+  background-color: rgb(200, 200, 200);
+  border: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  border-radius: 4px;
 }
 
 .c-logo {
   width: 34px;
   height: 34px;
-  margin-left: 20px;
-  align-items: center;
 }
 
 .middle-header {
@@ -68,4 +73,29 @@ a {
 .displays-link {
   margin: 30px;
   text-decoration: none;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.parts-grid {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 200px 300px 200px 200px;
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.grid-header {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  padding: 8px;
+}
+
+.grid-item {
 }

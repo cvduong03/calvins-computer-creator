@@ -1,0 +1,66 @@
+.table-container {
+  margin-left: 5%;
+  margin-right: 6%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Header Specific */
+thead {
+  background-color: rgb(203, 203, 203);
+  text-align: left;
+  margin: 0px;
+}
+
+/* Header and component body styling */
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-color: rgb(99, 99, 99);
+}
+
+/* Setting width of each component column */
+.th-component,
+.td-component {
+  width: 20%;
+}
+.th-selection,
+.td-selection {
+  width: 30%;
+}
+.th-price,
+.td-price {
+  width: 10%;
+}
+.th-settings,
+.td-settings {
+  width: 5%;
+}
+.th-store,
+.td-store {
+  width: 15%;
+}
+.th-buy,
+.td-buy {
+  width: 10%;
+}
+.th-remove,
+.td-remove {
+  width: 10%;
+}
+
+.choose-button {
+  background-color: rgb(40, 132, 190);
+  color: white;
+
+  padding: 4px 6px;
+
+  border: none;
+  border-radius: 4px;
+}
