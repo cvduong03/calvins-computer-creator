@@ -3,7 +3,42 @@ import { components } from "../../componentsData";
 import { Header } from "../../components/Header";
 import { useState } from "react";
 
-export function CpuPage() {
+export function CpuPage({ onPartAdded }) {
+  // store prior and updated cpu retailer as useable states
+  const [selectedRetailers, setSelectedRetailers] = useState({});
+
+  // update selectedRetailer when user picks from dropdown
+  const handleSelectChange = (cpuName, retailer) => {
+    setSelectedRetailers((prev) => ({
+      ...prev,
+      [cpuName]: retailer,
+    }));
+  };
+
+  // save retailer object on click
+  const handleAddClick = (cpu) => {
+    const retailerSite = selectedRetailers[cpu.name];
+    if (!retailerSite) return; // if no selection
+
+    const retailer = cpu.retailers.find(
+      (retailers) => retailers.site === retailerSite
+    );
+
+    const selectedPart = {
+      name: cpu.name,
+      site: retailer.site,
+      price: retailer.priceCents / 100,
+    };
+
+    onPartAdded(selectedPart);
+
+    console.log(
+      `Added CPU: ${cpu.name} from ${retailer.site} at $${
+        retailer.priceCents / 100
+      }`
+    );
+  };
+
   return (
     <>
       <title>Choose a CPU - Calvin's Computer Creator</title>
@@ -47,7 +82,13 @@ export function CpuPage() {
                   <td className="td-tdp">{cpu.tdp}</td>
                   <td className="td-graphics">{cpu.graphics}</td>
                   <td className="td-retailer">
-                    <select className="select-retailer">
+                    <select
+                      className="select-retailer"
+                      value={selectedRetailers[cpu.name] || ""}
+                      onChange={(e) =>
+                        handleSelectChange(cpu.name, e.target.value)
+                      }
+                    >
                       <option value="">Select Retailer</option>
                       {cpu.retailers.map((retailer) => (
                         <option key={retailer.site} value={retailer.site}>
@@ -57,7 +98,12 @@ export function CpuPage() {
                     </select>
                   </td>
                   <td>
-                    <button className="add-button">Add</button>
+                    <button
+                      className="add-button"
+                      onClick={() => handleAddClick(cpu)}
+                    >
+                      Add
+                    </button>
                   </td>
                 </tr>
               ))}
