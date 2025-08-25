@@ -1,12 +1,9 @@
 import "./CpuPage.css";
 import { components } from "../../componentsData";
 import { Header } from "../../components/Header";
+import { useState } from "react";
 
 export function CpuPage() {
-
-
-  // const retailerName = seletedRetailers[cpu.name];
-
   return (
     <>
       <title>Choose a CPU - Calvin's Computer Creator</title>
@@ -41,16 +38,27 @@ export function CpuPage() {
                     {cpu.image && (
                       <img className="td-product-image" src={`${cpu.image}`} />
                     )}
-                    {cpu.name}
+                    <span className="cpu-name-text">{cpu.name}</span>
                   </td>
+
                   <td className="td-core-count">{cpu.cores}</td>
                   <td className="td-core-clock">{cpu.clock}</td>
                   <td className="td-architecture">{cpu.architecture}</td>
                   <td className="td-tdp">{cpu.tdp}</td>
                   <td className="td-graphics">{cpu.graphics}</td>
-                  {/* <td className="td-retailer">
-
-                  </td> */}
+                  <td className="td-retailer">
+                    <select className="select-retailer">
+                      <option value="">Select Retailer</option>
+                      {cpu.retailers.map((retailer) => (
+                        <option key={retailer.site} value={retailer.site}>
+                          {retailer.site} - ${retailer.priceCents / 100}
+                        </option>
+                      ))}
+                    </select>
+                  </td>
+                  <td>
+                    <button className="add-button">Add</button>
+                  </td>
                 </tr>
               ))}
           </tbody>
