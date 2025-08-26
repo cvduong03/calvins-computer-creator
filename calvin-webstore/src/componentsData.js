@@ -1,4 +1,7 @@
 export const components = [
+
+  // CPU Data
+
   {
     type: "CPU",
     name: "AMD Ryzen 7 9800X3D",
@@ -95,4 +98,8 @@ export const components = [
       { site: "BestBuy", priceCents: 23999 },
     ],
   },
+
+  // CPU Cooler Data
+
+  
 ];

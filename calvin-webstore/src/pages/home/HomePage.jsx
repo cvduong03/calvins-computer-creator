@@ -5,19 +5,56 @@ import { PartsTable } from "./PartsTable";
 import { CpuPage } from "../component/CpuPage";
 
 export function HomePage() {
-  const [selectedParts, setSelectedParts] = useState([]);
+  // State to store all selected parts of the build, initialize with empty object
+  const [selectedParts, setSelectedParts] = useState({});
+
+  // React router hook for reading info passed from navigate()
   const location = useLocation();
 
   useEffect(() => {
+    const savedParts = localStorage.getItem("selectedParts");
+    if (savedParts) {
+      setSelectedParts(JSON.parse(savedParts));
+    }
+  }, []);
+
+  // runs whenever location.state changes (ex: back grom CpuPage with addedPart)
+  useEffect(() => {
     if (location.state?.addedPart) {
+      // check if page passed a part object
       const part = location.state.addedPart;
       // store by component type (e.g. CPU)
-      setSelectedParts((prev) => ({
-        ...prev,
-        [part.type]: part,
-      }));
+      setSelectedParts((prev) => {
+        const updated = {
+          ...prev, // keep old parts
+          [part.type]: part, // add/overwrite new part under its type
+        };
+        localStorage.setItem("selectedParts", JSON.stringify(updated));
+        return updated;
+      });
     }
   }, [location.state]);
+  // ^ dependency ensures this runs whenever location.state changes
+
+  const handleDelete = (type) => {
+    setSelectedParts((prev) => {
+      const updated = { ...prev };
+      delete updated[type];
+      localStorage.setItem("selectedParts", JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  const handleUpdate = (type, updates) => {
+    setSelectedParts((prev) => {
+      const updated = {
+        ...prev,
+        [type]: { ...prev[type], ...updates },
+      };
+      localStorage.setItem("selectedParts", JSON.stringify(updated));
+      return updated;
+    });
+  };
 
   return (
     <>
@@ -26,7 +63,11 @@ export function HomePage() {
 
       <Header />
 
-      <PartsTable selectedParts={selectedParts} />
+      <PartsTable
+        selectedParts={selectedParts}
+        onDelete={handleDelete}
+        onUpdate={handleUpdate}
+      />
     </>
   );
 }

@@ -5,34 +5,44 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function CpuPage() {
-  // store prior and updated cpu retailer as useable states
+  // keep track of which retailer the user chose for each CPU
+  // Example: { "AMD Ryzen 7 9800X3D": "Micro Center" }
   const [selectedRetailers, setSelectedRetailers] = useState({});
+
+  // lets us redirect user back to HomePage with some data
   const navigate = useNavigate();
 
-  // update selectedRetailer when user picks from dropdown
+  // when user changes dropdown, update selectedRetailers
   const handleSelectChange = (cpuName, retailer) => {
     setSelectedRetailers((prev) => ({
-      ...prev,
-      [cpuName]: retailer,
+      ...prev, // copy old/prior fields in select retailer
+      [cpuName]: retailer, // override these that are passed through
     }));
   };
 
-  // save retailer object on click
+  // when user clicks add button
   const handleAddClick = (cpu) => {
+    // look up the chosen retailer for the clicked CPU
+    // (Tracks choices across CPUs to remember when add is clicked)
     const retailerSite = selectedRetailers[cpu.name];
-    if (!retailerSite) return; // if no selection
+    if (!retailerSite) return; // if no selection, ignore click
 
+    // find retailer object from cpu.retailers list
+    // example: retailer = { site: "Amazon", priceCents: 24999 }
     const retailer = cpu.retailers.find(
       (retailers) => retailers.site === retailerSite
     );
 
+    // create object for HomePage to consume
     const selectedPart = {
       type: "CPU",
       name: cpu.name,
       site: retailer.site,
       price: retailer.priceCents / 100,
+      image: cpu.image,
     };
 
+    // go back to HomePage and pass new part through selectedParts
     navigate("/", { state: { addedPart: selectedPart } });
   };
 
@@ -45,7 +55,7 @@ export function CpuPage() {
       <h1>Choose your CPU</h1>
 
       <div className="table-container">
-        {/* Start of parts table */}
+        {/* Table to display CPUs */}
         <table>
           {/* Table header */}
           <thead>
@@ -62,6 +72,7 @@ export function CpuPage() {
           </thead>
 
           <tbody>
+            {/* Loop through all components and render CPUs */}
             {components
               .filter((part) => part.type === "CPU")
               .map((cpu, index) => (
@@ -85,7 +96,9 @@ export function CpuPage() {
                         handleSelectChange(cpu.name, e.target.value)
                       }
                     >
-                      <option value="">Select Retailer</option>
+                      <option value={selectedRetailers[cpu.name] || ""}>
+                        Select Retailer
+                      </option>
                       {cpu.retailers.map((retailer) => (
                         <option key={retailer.site} value={retailer.site}>
                           {retailer.site} - ${retailer.priceCents / 100}
