@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { components } from "../../componentsData.js";
 import "./PartsTable.css";
 
 // PartsTable is a reusable component that renders the parts list
@@ -15,12 +16,36 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
     setNewStore(selectedParts[type].site || "");
   };
 
+  const closeModal = () => setEditPart(null);
+
+  const handleStoreChange = (store) => {
+    setNewStore(store);
+
+    const partData = components.find(
+      (c) => c.type === editPart && c.name === selectedParts[editPart].name
+    );
+
+    if (partData) {
+      const retailer = partData.retailers.find((r) => r.site === store);
+      if (retailer) {
+        setNewPrice((retailer.priceCents / 100).toFixed(2));
+      }
+    }
+  };
+
   const saveChanges = () => {
     onUpdate(editPart, { price: parseFloat(newPrice), site: newStore });
     setEditPart(null);
   };
 
-  const closeModal = () => setEditPart(null);
+  // get retailers dynamically for the part being edited
+  const getRetailersForPart = () => {
+    if (!editPart) return [];
+    const partData = components.find(
+      (c) => c.type === editPart && c.name === selectedParts[editPart].name
+    );
+    return partData ? partData.retailers : [];
+  };
 
   return (
     <>
@@ -45,7 +70,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
             {/* CPU row -  currently the only dynamic row */}
             <tr className="tr-product">
               <td className="td-component">
-                <a href="/product/cpu">CPU</a>
+                <a className="component-name" href="/product/cpu">
+                  CPU
+                </a>
               </td>
               <td className="td-selection">
                 {/* if cpu was selected, display its name, otherwise button */}
@@ -67,20 +94,17 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
                 {selectedParts.CPU ? `$${selectedParts.CPU.price}` : ""}
               </td>
               <td className="td-settings">
-                {/* {selectedParts.CPU ? (
-                  <img className="gear-icon" src="/images/gear-icon.png" />
-                ) : (
-                  ""
-                )} */}
-
                 {selectedParts.CPU && (
                   <img
                     className="gear-icon"
-                    src="/images/gear-icon.png"
-                    style={{ cursor: "pointer" }}
+                    // src="/images/gear-icon.png"
+                    src="/images/gear-icon.svg"
+                    style={{ cursor: "pointer", filter: "invert(100%)" }}
                     onClick={() => openModal("CPU")}
                   />
                 )}
+
+                {/*  */}
               </td>
               <td className="td-store">
                 {selectedParts.CPU ? selectedParts.CPU.site : ""}
@@ -104,9 +128,13 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
               </td>
             </tr>
 
+            {/* IGNORE BELOW ------------------------------------------------- */}
+
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">CPU Cooler</a>
+                <a className="component-name" href="">
+                  CPU Cooler
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -122,7 +150,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Motherboard</a>
+                <a className="component-name" href="">
+                  Motherboard
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -138,7 +168,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Memory</a>
+                <a className="component-name" href="">
+                  Memory
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -154,7 +186,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Storage</a>
+                <a className="component-name" href="">
+                  Storage
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -170,7 +204,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Graphics Card</a>
+                <a className="component-name" href="">
+                  Graphics Card
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -186,7 +222,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Power Supply</a>
+                <a className="component-name" href="">
+                  Power Supply
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -202,7 +240,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Case</a>
+                <a className="component-name" href="">
+                  Case
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -218,7 +258,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Monitor</a>
+                <a className="component-name" href="">
+                  Monitor
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -234,7 +276,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Mouse</a>
+                <a className="component-name" href="">
+                  Mouse
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -250,7 +294,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Keyboard</a>
+                <a className="component-name" href="">
+                  Keyboard
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -266,7 +312,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
 
             <tr className="tr-product">
               <td className="td-component">
-                <a href="">Headphone</a>
+                <a className="component-name" href="">
+                  Headphone
+                </a>
               </td>
               <td className="td-selection">
                 <a className="choose-button" href="">
@@ -288,6 +336,22 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
         <div className="modal-backdrop">
           <div className="modal">
             <h2>Edit {editPart}</h2>
+
+            <label>
+              Store:
+              <select
+                value={newStore}
+                onChange={(e) => handleStoreChange(e.target.value)}
+              >
+                {getRetailersForPart().map((r) => (
+                  <option key={r.site} value={r.site}>
+                    {r.site}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <br />
+
             <label>
               Price: $
               <input
@@ -297,19 +361,7 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
               />
             </label>
             <br />
-            <label>
-              Store:
-              <select
-                value={newStore}
-                onChange={(e) => setNewStore(e.target.value)}
-              >
-                <option value="Amazon">Amazon</option>
-                <option value="Newegg">Newegg</option>
-                <option value="Best Buy">Best Buy</option>
-                <option value="Micro Center">Micro Center</option>
-              </select>
-            </label>
-            <br />
+
             <button onClick={saveChanges}>Save</button>
             <button onClick={closeModal}>Cancel</button>
           </div>

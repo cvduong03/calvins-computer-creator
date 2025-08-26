@@ -5,6 +5,7 @@ body {
      on all sides. This removes the default margins. */
   margin: 0;
   margin-bottom: 1000px;
+  background-color: rgb(40, 40, 56);
 }
 
 /* Remove the default margins of <p> elements. */

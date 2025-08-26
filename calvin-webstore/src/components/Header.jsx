@@ -29,19 +29,10 @@ export function Header() {
           <a href="" className="link">
             <span className="audio-link">Showcase</span>
           </a>
-          <a href="" className="link">
-            <img className="search-icon" src="/images/search-icon.png" />
-          </a>
         </div>
 
         <div className="right-header">
-          <a href="">
-            <img
-              className="checkout-icon"
-              src="images/checkout-icon.png"
-              alt=""
-            />
-          </a>
+          {/* right side */}
         </div>
       </div>
     </>
