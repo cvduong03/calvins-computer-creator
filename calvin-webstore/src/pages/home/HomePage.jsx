@@ -1,15 +1,23 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { PartsTable } from "./PartsTable";
 import { CpuPage } from "../component/CpuPage";
 
 export function HomePage() {
   const [selectedParts, setSelectedParts] = useState([]);
+  const location = useLocation();
 
-  const handlePartAdded = (part) => {
-    setSelectedParts((prev) => [...prev, part]);
-  };
+  useEffect(() => {
+    if (location.state?.addedPart) {
+      const part = location.state.addedPart;
+      // store by component type (e.g. CPU)
+      setSelectedParts((prev) => ({
+        ...prev,
+        [part.type]: part,
+      }));
+    }
+  }, [location.state]);
 
   return (
     <>
@@ -18,16 +26,7 @@ export function HomePage() {
 
       <Header />
 
-      <CpuPage onPartAdded={handlePartAdded} />
-      <div>
-        {selectedParts.map((p, i) => (
-          <p key={i}>
-            {p.name} from {p.site} at ${p.price}
-          </p>
-        ))}
-      </div>
-
-      <PartsTable />
+      <PartsTable selectedParts={selectedParts} />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import "./PartsTable.css";
 
-export function PartsTable() {
+export function PartsTable({ selectedParts = [] }) {
   return (
     <>
       <div className="table-container">
@@ -27,6 +27,31 @@ export function PartsTable() {
                 <a href="/product/cpu">CPU</a>
               </td>
               <td className="td-selection">
+                {selectedParts.CPU ? (
+                  <span>{selectedParts.CPU.name}</span>
+                ) : (
+                  <a className="choose-button" href="/product/cpu">
+                    + Choose a CPU
+                  </a>
+                )}
+              </td>
+              <td className="td-price">
+                {selectedParts.CPU ? `$${selectedParts.CPU.price}` : ""}
+              </td>
+              <td className="td-settings"></td>
+              <td className="td-store">
+                {selectedParts.CPU ? selectedParts.CPU.site : ""}
+              </td>
+              <td className="td-where"></td>
+              <td className="td-buy"></td>
+              <td className="td-remove"></td>
+            </tr>
+
+            {/* <tr className="tr-product">
+              <td className="td-component">
+                <a href="/product/cpu">CPU</a>
+              </td>
+              <td className="td-selection">
                 <a className="choose-button" href="/product/cpu">
                   + Choose a CPU
                 </a>
@@ -37,7 +62,7 @@ export function PartsTable() {
               <td className="td-where"></td>
               <td className="td-buy"></td>
               <td className="td-remove"></td>
-            </tr>
+            </tr> */}
 
             <tr className="tr-product">
               <td className="td-component">

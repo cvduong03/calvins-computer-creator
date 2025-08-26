@@ -2,10 +2,12 @@ import "./CpuPage.css";
 import { components } from "../../componentsData";
 import { Header } from "../../components/Header";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export function CpuPage({ onPartAdded }) {
+export function CpuPage() {
   // store prior and updated cpu retailer as useable states
   const [selectedRetailers, setSelectedRetailers] = useState({});
+  const navigate = useNavigate();
 
   // update selectedRetailer when user picks from dropdown
   const handleSelectChange = (cpuName, retailer) => {
@@ -25,18 +27,13 @@ export function CpuPage({ onPartAdded }) {
     );
 
     const selectedPart = {
+      type: "CPU",
       name: cpu.name,
       site: retailer.site,
       price: retailer.priceCents / 100,
     };
 
-    onPartAdded(selectedPart);
-
-    console.log(
-      `Added CPU: ${cpu.name} from ${retailer.site} at $${
-        retailer.priceCents / 100
-      }`
-    );
+    navigate("/", { state: { addedPart: selectedPart } });
   };
 
   return (
@@ -71,7 +68,7 @@ export function CpuPage({ onPartAdded }) {
                 <tr key={index} className="tr-product">
                   <td className="td-name">
                     {cpu.image && (
-                      <img className="td-product-image" src={`${cpu.image}`} />
+                      <img className="td-product-image" src={cpu.image} />
                     )}
                     <span className="cpu-name-text">{cpu.name}</span>
                   </td>
@@ -84,7 +81,6 @@ export function CpuPage({ onPartAdded }) {
                   <td className="td-retailer">
                     <select
                       className="select-retailer"
-                      value={selectedRetailers[cpu.name] || ""}
                       onChange={(e) =>
                         handleSelectChange(cpu.name, e.target.value)
                       }
