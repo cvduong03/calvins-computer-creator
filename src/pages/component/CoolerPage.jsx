@@ -5,7 +5,7 @@ import { useAddPart } from "../../../useAddPart";
 
 export function CoolerPage() {
   const { selectedRetailers, handleSelectChange, handleAddClick } =
-    useAddPart("Cooler");
+    useAddPart("cooler");
 
   return (
     <>

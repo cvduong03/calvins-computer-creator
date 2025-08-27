@@ -24,11 +24,9 @@ export function useAddPart(partType) {
     if (!retailer) return;
 
     const selectedPart = {
-      type: part.type,
-      name: part.name,
+      ...part,
       site: retailer.site,
       price: retailer.priceCents / 100,
-      image: part.image,
     };
 
     navigate("/", { state: { addedPart: selectedPart } });

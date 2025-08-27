@@ -1,0 +1,19 @@
+.compatibility-filter {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding-right: 40px;
+  color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* change background to red if there are errors */
+.compatibility-filter.error {
+  background-color: rgba(233, 43, 43, 0.642);
+}
+
+.compatibility-filter.success {
+  background-color: rgba(43, 233, 78, 0.642);
+}

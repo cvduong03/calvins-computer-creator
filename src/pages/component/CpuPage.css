@@ -24,15 +24,15 @@
 }
 .th-core-clock,
 .td-core-clock {
-  width: 15%;
+  width: 20%;
 }
-.th-architecture,
-.td-architecture {
-  width: 10%;
+.th-socket,
+.td-socket {
+  width: 5%;
 }
 .th-tdp,
 .td-tdp {
-  width: 5%;
+  width: 10%;
 }
 .th-graphics,
 .td-graphics {

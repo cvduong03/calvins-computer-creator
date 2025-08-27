@@ -6,8 +6,8 @@ export const components = [
     image: "/images/parts/cpu/9800X3D.jpg",
     cores: "8C, 16T",
     clock: "4.7GHz, 5.2GHz Boost",
-    architecture: "AM5",
-    tdp: "120W",
+    socket: "AMD",
+    power: 120,
     graphics: "Radeon",
     retailers: [
       { site: "Amazon", priceCents: 47999 },
@@ -22,8 +22,8 @@ export const components = [
     image: "/images/parts/cpu/9700X.jpg",
     cores: "8C, 16T",
     clock: "3.8GHz, 5.5GHz Boost",
-    architecture: "AM5",
-    tdp: "65W",
+    socket: "AMD",
+    power: 65,
     graphics: "Radeon",
     retailers: [
       { site: "Amazon", priceCents: 27999 },
@@ -38,8 +38,8 @@ export const components = [
     image: "/images/parts/cpu/9600X.jpg",
     cores: "6C, 12T",
     clock: "3.9GHz, 5.4GHz Boost",
-    architecture: "AM5",
-    tdp: "65W",
+    socket: "AMD",
+    power: 65,
     graphics: "Radeon",
     retailers: [
       { site: "Amazon", priceCents: 17999 },
@@ -54,8 +54,8 @@ export const components = [
     image: "/images/parts/cpu/285K.jpg",
     cores: "24C, 24T",
     clock: "4.6GHz, 5.7GHz Boost",
-    architecture: "Arrow Lake",
-    tdp: "125W",
+    socket: "Intel",
+    power: 125,
     graphics: "Intel Xe",
     retailers: [
       { site: "Amazon", priceCents: 52999 },
@@ -70,8 +70,8 @@ export const components = [
     image: "/images/parts/cpu/265K.jpg",
     cores: "20C, 20T",
     clock: "4.6GHz, 5.5GHz Boost",
-    architecture: "Arrow Lake",
-    tdp: "125W",
+    socket: "Intel",
+    power: 125,
     graphics: "Intel Xe",
     retailers: [
       { site: "Amazon", priceCents: 25999 },
@@ -86,8 +86,8 @@ export const components = [
     image: "/images/parts/cpu/245K.jpg",
     cores: "14C, 14T",
     clock: "4.6GHz, 5.2GHz Boost",
-    architecture: "Arrow Lake",
-    tdp: "125W",
+    socket: "Intel",
+    power: 125,
     graphics: "Intel Xe",
     retailers: [
       { site: "Amazon", priceCents: 23999 },
@@ -101,19 +101,19 @@ export const components = [
   {
     type: "CPU Cooler",
     name: "Thermalright Peerless Assassin 120 SE",
-    subtype: "Air",
-    size: "155mm",
+    liquid: false,
+    size: 155,
     image: "/images/parts/cooler/thermalright.jpg",
     retailers: [
-      { site: "Amazon", priceCents: 3490 },
+      { site: "Amazon", priceCents: 3499 },
       { site: "Micro Center", priceCents: 4999 },
     ],
   },
   {
     type: "CPU Cooler",
     name: "Noctua NH-D15",
-    subtype: "Air",
-    size: "165mm",
+    liquid: false,
+    size: 165,
     image: "/images/parts/cooler/noctuaD15.jpg",
     retailers: [
       { site: "Amazon", priceCents: 12994 },
@@ -124,8 +124,8 @@ export const components = [
   {
     type: "CPU Cooler",
     name: "Noctua NH-L9(A/I)",
-    subtype: "Air",
-    size: "37mm",
+    liquid: false,
+    size: 37,
     image: "/images/parts/cooler/noctuaL9.jpg",
     retailers: [
       { site: "Amazon", priceCents: 5999 },
@@ -136,8 +136,8 @@ export const components = [
   {
     type: "CPU Cooler",
     name: "ARCTIC Liquid Freezer III Pro",
-    subtype: "Liquid",
-    size: "360mm",
+    liquid: true,
+    size: 360,
     image: "/images/parts/cooler/arctic360.jpg",
     retailers: [
       { site: "Amazon", priceCents: 8499 },
@@ -148,8 +148,8 @@ export const components = [
   {
     type: "CPU Cooler",
     name: "NZXT Kraken 240",
-    subtype: "Liquid",
-    size: "240mm",
+    liquid: true,
+    size: 240,
     image: "/images/parts/cooler/kraken240.jpg",
     retailers: [
       { site: "Amazon", priceCents: 13999 },
@@ -159,8 +159,8 @@ export const components = [
   {
     type: "CPU Cooler",
     name: "Cooler Master MasterLiquid 360L Core ARGB",
-    subtype: "Liquid",
-    size: "360mm",
+    liquid: true,
+    size: 360,
     image: "/images/parts/cooler/cm360.jpg",
     retailers: [
       { site: "Amazon", priceCents: 11999 },
@@ -172,7 +172,7 @@ export const components = [
   // AMD
   {
     type: "Motherboard",
-    name: "Asus B650E MAX GAMING WIFI",
+    name: "Asus B650E MAX GAMING WIFI ATX",
     socket: "AMD",
     size: "ATX",
     wifi: "Yes",
@@ -184,9 +184,9 @@ export const components = [
   },
   {
     type: "Motherboard",
-    name: "Gigabyte B850M GAMING X WIFI6E",
+    name: "Gigabyte B850M GAMING X WIFI6E MATX",
     socket: "AMD",
-    size: "MicroATX",
+    size: "MATX",
     wifi: "Yes",
     image: "/images/parts/motherboard/amdMATX.jpg",
     retailers: [
@@ -197,8 +197,8 @@ export const components = [
   {
     type: "Motherboard",
     name: "ASRock B850I Lightning WiFi Mini ITX",
-    socket: "Intel",
-    size: "MiniITX",
+    socket: "AMD",
+    size: "ITX",
     wifi: "Yes",
     image: "/images/parts/motherboard/amdITX.jpg",
     retailers: [
@@ -221,9 +221,9 @@ export const components = [
   },
   {
     type: "Motherboard",
-    name: "Gigabyte Z890M AORUS ELITE WIFI7 ICE",
+    name: "Gigabyte Z890M AORUS ELITE WIFI7 ICE MATX",
     socket: "Intel",
-    size: "MicroATX",
+    size: "MATX",
     wifi: "Yes",
     image: "/images/parts/motherboard/intelMATX.jpg",
     retailers: [
@@ -234,9 +234,9 @@ export const components = [
   },
   {
     type: "Motherboard",
-    name: "Asus ROG STRIX B860-I GAMING WIFI",
+    name: "Asus ROG STRIX B860-I GAMING WIFI Mini ITX",
     socket: "Intel",
-    size: "MiniITX",
+    size: "ITX",
     wifi: "Yes",
     image: "/images/parts/motherboard/intelITX.jpg",
     retailers: [
@@ -563,7 +563,7 @@ export const components = [
     type: "Case",
     name: "Corsair 3500X ARGB ATX Mid Tower Case",
     size: "ATX",
-    cooler: 360,
+    maxcoolersize: 360,
     aio: true,
     gpu: 410,
     image: "/images/parts/case/corsairATX.jpg",
@@ -577,7 +577,7 @@ export const components = [
     type: "Case",
     name: "NZXT H5 Flow ATX Mid Tower Case",
     size: "ATX",
-    cooler: 360,
+    maxcoolersize: 360,
     aio: true,
     gpu: 410,
     image: "/images/parts/case/nzxtATX.jpg",
@@ -592,7 +592,7 @@ export const components = [
     type: "Case",
     name: "Fractal Design Pop Mini Air MicroATX Mid Tower Case",
     size: "MATX",
-    cooler: 240,
+    maxcoolersize: 240,
     aio: true,
     gpu: 365,
     image: "/images/parts/case/fractalMATX.jpg",
@@ -605,7 +605,7 @@ export const components = [
     type: "Case",
     name: "Lian Li A3-mATX MicroATX Mini Tower Case",
     size: "MATX",
-    cooler: 360,
+    maxcoolersize: 360,
     aio: true,
     gpu: 415,
     image: "/images/parts/case/lianliMATX.jpg",
@@ -619,7 +619,7 @@ export const components = [
     type: "Case",
     name: "Fractal Design Terra Mini ITX Desktop Case",
     size: "ITX",
-    cooler: 77,
+    maxcoolersize: 77,
     aio: false,
     gpu: 322,
     image: "/images/parts/case/fractalITX.jpg",
@@ -633,7 +633,7 @@ export const components = [
     type: "Case",
     name: "Lian Li A4-H20 X4 Mini ITX Desktop Case",
     size: "ITX",
-    cooler: 240,
+    maxcoolersize: 240,
     aio: true,
     gpu: 322,
     image: "/images/parts/case/lianliITX.jpg",
