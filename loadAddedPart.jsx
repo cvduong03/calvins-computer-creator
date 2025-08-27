@@ -1,7 +1,7 @@
 import { components } from "./src/componentsData";
 import React from "react";
 
-export function loadAddedPart(type, selectedParts, openModal, onDelete) {
+export function loadAddedPart(type, selectedParts, onDelete) {
   const part = selectedParts[type]; // dynamically get part by type
   const typeLower = type.toLowerCase(); // for URLs and labels
   const preppedLink = typeLower.replace(/\s+/g, "-"); // replace all spaces with a hyphen
@@ -30,17 +30,6 @@ export function loadAddedPart(type, selectedParts, openModal, onDelete) {
         </td>
 
         <td className="td-price">{part ? `$${part.price}` : ""}</td>
-
-        <td className="td-settings">
-          {part && (
-            <img
-              className="gear-icon"
-              src="/images/gear-icon.svg"
-              style={{ cursor: "pointer", filter: "invert(100%)" }}
-              onClick={() => openModal({ type })}
-            />
-          )}
-        </td>
 
         <td className="td-store">{part ? part.site : ""}</td>
 

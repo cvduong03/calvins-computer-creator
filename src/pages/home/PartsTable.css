@@ -1,6 +1,6 @@
 .table-container {
   margin-left: 5%;
-  margin-right: 6%;
+  margin-right: 5%;
 }
 
 table {
@@ -11,7 +11,7 @@ table {
 
 /* Header Specific */
 thead {
-  background-color: rgb(9, 1, 30);
+  background-color: rgba(13, 7, 23, 0.642);
   color: white;
   text-align: left;
   margin: 0px;
@@ -39,7 +39,7 @@ td {
 /* Setting width of each component column */
 .th-component,
 .td-component {
-  width: 20%;
+  width: 15%;
 }
 .th-selection,
 .td-selection {
@@ -49,17 +49,13 @@ td {
 .td-price {
   width: 10%;
 }
-.th-settings,
-.td-settings {
-  width: 5%;
-}
 .th-store,
 .td-store {
   width: 15%;
 }
 .th-buy,
 .td-buy {
-  width: 15%;
+  width: 10%;
 }
 .th-remove,
 .td-remove {
@@ -92,23 +88,6 @@ td {
   vertical-align: middle;
   width: 50px;
   margin-right: 5px;
-}
-
-.gear-icon {
-  width: 20px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.gear-icon:hover {
-  cursor: pointer;
-  background-color: rgb(216, 216, 216);
-  border-width: 50px;
-  border-radius: 25px;
-}
-
-.gear-icon:active {
-  background-color: rgb(170, 170, 170);
 }
 
 .buy-button {
@@ -145,78 +124,4 @@ td {
 
 .remove-button:active {
   background-color: rgb(156, 21, 21);
-}
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal {
-  background: rgb(22, 25, 63);
-  color: white;
-  padding: 20px 50px 40px 50px;
-  border-radius: 8px;
-  min-width: 300px;
-}
-
-.store-select {
-  margin-left: 10px;
-  padding: 5px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: white;
-  color: black;
-  width: 108px;
-}
-
-.price-input {
-  margin-left: 12px;
-  padding: 2px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  width: 102px;
-  margin-top: 10px;
-}
-
-.save-button {
-  background-color: rgb(40, 132, 190);
-  color: white;
-  border: none;
-  padding: 6px 20px;
-  border-radius: 4px;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-
-.cancel-button {
-  background-color: rgb(230, 73, 73);
-  color: white;
-  border: none;
-  padding: 6px 20px;
-  border-radius: 4px;
-  margin-top: 10px;
-}
-
-.store-select:hover {
-  cursor: pointer;
-}
-
-.save-button:hover,
-.cancel-button:hover {
-  cursor: pointer;
-  opacity: 80%;
-}
-
-.save-button:active,
-.cancel-button:active {
-  opacity: 100%;
 }

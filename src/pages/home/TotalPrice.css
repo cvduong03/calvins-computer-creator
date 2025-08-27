@@ -1,0 +1,9 @@
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+  margin-left: 5%;
+  background-color: rgba(13, 7, 23, 0.642);
+  padding-right: 40px;
+  color: white;
+}

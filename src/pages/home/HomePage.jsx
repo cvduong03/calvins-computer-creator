@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { PartsTable } from "./PartsTable";
 import { CpuPage } from "../component/CpuPage";
+import { TotalPrice } from "./TotalPrice";
 
 export function HomePage() {
   // State to store all selected parts of the build, initialize with empty object
@@ -68,6 +69,8 @@ export function HomePage() {
         onDelete={handleDelete}
         onUpdate={handleUpdate}
       />
+
+      <TotalPrice selectedParts={selectedParts} />
     </>
   );
 }
