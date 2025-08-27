@@ -1,25 +1,26 @@
-import "./MemoryPage.css";
+import "./GpuPage.css";
 import { components } from "../../componentsData";
 import { Header } from "../../components/Header";
 import { useAddPart } from "../../../useAddPart";
 
-export function MemoryPage() {
+export function GpuPage() {
   const { selectedRetailers, handleSelectChange, handleAddClick } =
-    useAddPart("Memory");
+    useAddPart("Graphics Card");
 
   return (
     <>
-      <title>Choose your Memory - Calvin's Computer Creator</title>
+      <title>Choose your Graphics Card - Calvin's Computer Creator</title>
       <Header />
-      <h1>Choose your Memory</h1>
+      <h1>Choose your Graphics Card</h1>
 
       <div className="table-container">
         <table>
           <thead>
             <tr>
               <th className="th-name">Name</th>
-              <th className="th-size">Size</th>
-              <th className="th-speed">Speed</th>
+              <th className="th-memory">Memory</th>
+              <th className="th-length">Length</th>
+              <th className="th-power">Power</th>
               <th className="th-retailer"></th>
               <th className="th-add"></th>
             </tr>
@@ -27,28 +28,29 @@ export function MemoryPage() {
 
           <tbody>
             {components
-              .filter((part) => part.type === "Memory")
-              .map((memory, index) => (
+              .filter((part) => part.type === "Graphics Card")
+              .map((gpu, index) => (
                 <tr key={index} className="tr-product">
                   <td className="td-name">
-                    {memory.image && (
-                      <img className="td-product-image" src={memory.image} />
+                    {gpu.image && (
+                      <img className="td-product-image" src={gpu.image} />
                     )}
-                    <span className="memory-name-text">{memory.name}</span>
+                    <span className="gpu-name-text">{gpu.name}</span>
                   </td>
-                  <td className="td-size">{memory.size}</td>
-                  <td className="td-speed">{memory.speed}</td>
+                  <td className="td-memory">{gpu.memory}</td>
+                  <td className="td-length">{gpu.length}</td>
+                  <td className="td-power">{gpu.power}</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"
                       onChange={(e) =>
-                        handleSelectChange(memory.name, e.target.value)
+                        handleSelectChange(gpu.name, e.target.value)
                       }
                     >
-                      <option value={selectedRetailers[memory.name] || ""}>
+                      <option value={selectedRetailers[gpu.name] || ""}>
                         Select Retailer
                       </option>
-                      {memory.retailers.map((retailer) => (
+                      {gpu.retailers.map((retailer) => (
                         <option key={retailer.site} value={retailer.site}>
                           {retailer.site} - ${retailer.priceCents / 100}
                         </option>
@@ -58,7 +60,7 @@ export function MemoryPage() {
                   <td>
                     <button
                       className="add-button"
-                      onClick={() => handleAddClick(memory)}
+                      onClick={() => handleAddClick(gpu)}
                     >
                       Add
                     </button>

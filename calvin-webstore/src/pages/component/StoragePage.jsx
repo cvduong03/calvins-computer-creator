@@ -1,25 +1,25 @@
-import "./MemoryPage.css";
+import "./StoragePage.css";
 import { components } from "../../componentsData";
 import { Header } from "../../components/Header";
 import { useAddPart } from "../../../useAddPart";
 
-export function MemoryPage() {
+export function StoragePage() {
   const { selectedRetailers, handleSelectChange, handleAddClick } =
-    useAddPart("Memory");
+    useAddPart("Storage");
 
   return (
     <>
-      <title>Choose your Memory - Calvin's Computer Creator</title>
+      <title>Choose your Storage - Calvin's Computer Creator</title>
       <Header />
-      <h1>Choose your Memory</h1>
+      <h1>Choose your Storage</h1>
 
       <div className="table-container">
         <table>
           <thead>
             <tr>
               <th className="th-name">Name</th>
+              <th className="th-storageType">Storage Type</th>
               <th className="th-size">Size</th>
-              <th className="th-speed">Speed</th>
               <th className="th-retailer"></th>
               <th className="th-add"></th>
             </tr>
@@ -27,28 +27,28 @@ export function MemoryPage() {
 
           <tbody>
             {components
-              .filter((part) => part.type === "Memory")
-              .map((memory, index) => (
+              .filter((part) => part.type === "Storage")
+              .map((storage, index) => (
                 <tr key={index} className="tr-product">
                   <td className="td-name">
-                    {memory.image && (
-                      <img className="td-product-image" src={memory.image} />
+                    {storage.image && (
+                      <img className="td-product-image" src={storage.image} />
                     )}
-                    <span className="memory-name-text">{memory.name}</span>
+                    <span className="Storage-name-text">{storage.name}</span>
                   </td>
-                  <td className="td-size">{memory.size}</td>
-                  <td className="td-speed">{memory.speed}</td>
+                  <td className="td-storage-type">{storage.size}</td>
+                  <td className="td-size">{storage.speed}</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"
                       onChange={(e) =>
-                        handleSelectChange(memory.name, e.target.value)
+                        handleSelectChange(storage.name, e.target.value)
                       }
                     >
-                      <option value={selectedRetailers[memory.name] || ""}>
+                      <option value={selectedRetailers[Storage.name] || ""}>
                         Select Retailer
                       </option>
-                      {memory.retailers.map((retailer) => (
+                      {storage.retailers.map((retailer) => (
                         <option key={retailer.site} value={retailer.site}>
                           {retailer.site} - ${retailer.priceCents / 100}
                         </option>
@@ -58,7 +58,7 @@ export function MemoryPage() {
                   <td>
                     <button
                       className="add-button"
-                      onClick={() => handleAddClick(memory)}
+                      onClick={() => handleAddClick(storage)}
                     >
                       Add
                     </button>

@@ -18,8 +18,8 @@
 .td-name {
   width: 30%;
 }
-.th-subtype,
-.td-subtype {
+.th-storage-type,
+.td-storage-type {
   width: 20%;
 }
 .th-size,

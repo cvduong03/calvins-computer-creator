@@ -9,9 +9,9 @@ export function CoolerPage() {
 
   return (
     <>
-      <title>Choose a Cooler - Calvin's Computer Creator</title>
+      <title>Choose your CPU Cooler - Calvin's Computer Creator</title>
       <Header />
-      <h1>Choose your Cooler</h1>
+      <h1>Choose your CPU Cooler</h1>
 
       <div className="table-container">
         <table>

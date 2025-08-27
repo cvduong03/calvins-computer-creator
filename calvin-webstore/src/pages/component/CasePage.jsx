@@ -1,17 +1,17 @@
-import "./MemoryPage.css";
+import "./CasePage.css";
 import { components } from "../../componentsData";
 import { Header } from "../../components/Header";
 import { useAddPart } from "../../../useAddPart";
 
-export function MemoryPage() {
+export function CasePage() {
   const { selectedRetailers, handleSelectChange, handleAddClick } =
-    useAddPart("Memory");
+    useAddPart("Case");
 
   return (
     <>
-      <title>Choose your Memory - Calvin's Computer Creator</title>
+      <title>Choose your Case - Calvin's Computer Creator</title>
       <Header />
-      <h1>Choose your Memory</h1>
+      <h1>Choose your Case</h1>
 
       <div className="table-container">
         <table>
@@ -19,7 +19,6 @@ export function MemoryPage() {
             <tr>
               <th className="th-name">Name</th>
               <th className="th-size">Size</th>
-              <th className="th-speed">Speed</th>
               <th className="th-retailer"></th>
               <th className="th-add"></th>
             </tr>
@@ -27,28 +26,28 @@ export function MemoryPage() {
 
           <tbody>
             {components
-              .filter((part) => part.type === "Memory")
-              .map((memory, index) => (
+              .filter((part) => part.type === "Case")
+              .map((pcCase, index) => (
                 <tr key={index} className="tr-product">
                   <td className="td-name">
-                    {memory.image && (
-                      <img className="td-product-image" src={memory.image} />
+                    {pcCase.image && (
+                      <img className="td-product-image" src={pcCase.image} />
                     )}
-                    <span className="memory-name-text">{memory.name}</span>
+                    <span className="pcCase-name-text">{pcCase.name}</span>
                   </td>
-                  <td className="td-size">{memory.size}</td>
-                  <td className="td-speed">{memory.speed}</td>
+                  <td className="td-pcCase-type">{pcCase.size}</td>
+                  <td className="td-size">{pcCase.speed}</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"
                       onChange={(e) =>
-                        handleSelectChange(memory.name, e.target.value)
+                        handleSelectChange(pcCase.name, e.target.value)
                       }
                     >
-                      <option value={selectedRetailers[memory.name] || ""}>
+                      <option value={selectedRetailers[pcCase.name] || ""}>
                         Select Retailer
                       </option>
-                      {memory.retailers.map((retailer) => (
+                      {pcCase.retailers.map((retailer) => (
                         <option key={retailer.site} value={retailer.site}>
                           {retailer.site} - ${retailer.priceCents / 100}
                         </option>
@@ -58,7 +57,7 @@ export function MemoryPage() {
                   <td>
                     <button
                       className="add-button"
-                      onClick={() => handleAddClick(memory)}
+                      onClick={() => handleAddClick(pcCase)}
                     >
                       Add
                     </button>

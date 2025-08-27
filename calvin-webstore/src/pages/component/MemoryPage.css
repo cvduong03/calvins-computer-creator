@@ -18,12 +18,12 @@
 .td-name {
   width: 30%;
 }
-.th-subtype,
-.td-subtype {
-  width: 20%;
-}
 .th-size,
 .td-size {
+  width: 20%;
+}
+.th-speed,
+.td-speed {
   width: 15%;
 }
 .th-retailer,
