@@ -18,33 +18,21 @@
 .td-name {
   width: 30%;
 }
-.th-core-count,
-.td-core-count {
-  width: 10%;
+.th-subtype,
+.td-subtype {
+  width: 25%;
 }
-.th-core-clock,
-.td-core-clock {
-  width: 15%;
-}
-.th-architecture,
-.td-architecture {
-  width: 10%;
-}
-.th-tdp,
-.td-tdp {
-  width: 5%;
-}
-.th-graphics,
-.td-graphics {
+.th-size,
+.td-size {
   width: 10%;
 }
 .th-retailer,
 .td-retailer {
-  width: 10%;
+  width: 25%;
 }
 .th-add,
 .td-add {
-  width: 5%;
+  width: 15%;
 }
 
 .select-retailer {

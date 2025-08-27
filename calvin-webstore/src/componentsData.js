@@ -1,7 +1,5 @@
 export const components = [
-
-  // CPU Data
-
+  // ------------------ CPU ------------------
   {
     type: "CPU",
     name: "AMD Ryzen 7 9800X3D",
@@ -99,7 +97,366 @@ export const components = [
     ],
   },
 
-  // CPU Cooler Data
+  // ------------------ CPU Coolers ------------------
+  {
+    type: "CPU Cooler",
+    name: "Noctua NH-D15",
+    subtype: "Air",
+    image: "/images/noctua-nh-d15.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 8999 },
+      { site: "Newegg", priceCents: 9199 },
+    ],
+  },
+  {
+    type: "CPU Cooler",
+    name: "be quiet! Dark Rock Pro 4",
+    subtype: "Air",
+    image: "/images/dark-rock-pro4.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 8499 },
+      { site: "Newegg", priceCents: 8699 },
+    ],
+  },
+  {
+    type: "CPU Cooler",
+    name: "CPU Cooler Master Hyper 212",
+    subtype: "Air",
+    image: "/images/hyper-212.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 3999 },
+      { site: "Newegg", priceCents: 4199 },
+    ],
+  },
+  {
+    type: "CPU Cooler",
+    name: "Corsair H100i RGB Platinum",
+    subtype: "Liquid",
+    image: "/images/corsair-h100i.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 12999 },
+      { site: "Newegg", priceCents: 13199 },
+    ],
+  },
+  {
+    type: "CPU Cooler",
+    name: "NZXT Kraken X63",
+    subtype: "Liquid",
+    image: "/images/nzxt-kraken-x63.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 13999 },
+      { site: "Newegg", priceCents: 14299 },
+    ],
+  },
+  {
+    type: "CPU Cooler",
+    name: "EVGA CLC 280",
+    subtype: "Liquid",
+    image: "/images/evga-clc-280.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 11999 },
+      { site: "Newegg", priceCents: 12199 },
+    ],
+  },
 
-  
+  // ------------------ Motherboards ------------------
+  // Intel
+  {
+    type: "Motherboard",
+    name: "ASUS Z790-A Prime",
+    socket: "Intel",
+    size: "ATX",
+    image: "/images/asus-z790a.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 29999 },
+      { site: "Newegg", priceCents: 30599 },
+    ],
+  },
+  {
+    type: "Motherboard",
+    name: "MSI B760M Pro-VDH",
+    socket: "Intel",
+    size: "MicroATX",
+    image: "/images/msi-b760m.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 14999 },
+      { site: "Newegg", priceCents: 15299 },
+    ],
+  },
+  {
+    type: "Motherboard",
+    name: "Gigabyte Z790I Aorus Ultra",
+    socket: "Intel",
+    size: "MiniITX",
+    image: "/images/gigabyte-z790i.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 29999 },
+      { site: "Newegg", priceCents: 30499 },
+    ],
+  },
+  // AMD
+  {
+    type: "Motherboard",
+    name: "ASUS X670E Prime",
+    socket: "AMD",
+    size: "ATX",
+    image: "/images/asus-x670e.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 32999 },
+      { site: "Newegg", priceCents: 33599 },
+    ],
+  },
+  {
+    type: "Motherboard",
+    name: "MSI B650M Mortar",
+    socket: "AMD",
+    size: "MicroATX",
+    image: "/images/msi-b650m.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 15999 },
+      { site: "Newegg", priceCents: 16299 },
+    ],
+  },
+  {
+    type: "Motherboard",
+    name: "Gigabyte B650I Aorus Ultra",
+    socket: "AMD",
+    size: "MiniITX",
+    image: "/images/gigabyte-b650i.jpg",
+    retailers: [
+      { site: "Amazon", priceCents: 26999 },
+      { site: "Newegg", priceCents: 27499 },
+    ],
+  },
+
+  // ------------------ Memory (DDR5) ------------------
+  {
+    type: "RAM",
+    name: "Corsair Vengeance DDR5 32GB 5200MHz",
+    speed: 5200,
+    image: "/images/corsair-32gb-5200.jpg",
+    retailers: [{ site: "Amazon", priceCents: 14999 }],
+  },
+  {
+    type: "RAM",
+    name: "G.Skill Trident Z5 DDR5 32GB 6000MHz",
+    speed: 6000,
+    image: "/images/gskill-32gb-6000.jpg",
+    retailers: [{ site: "Amazon", priceCents: 16999 }],
+  },
+  {
+    type: "RAM",
+    name: "Kingston Fury Beast DDR5 16GB 4800MHz",
+    speed: 4800,
+    image: "/images/kingston-16gb-4800.jpg",
+    retailers: [{ site: "Amazon", priceCents: 8999 }],
+  },
+  {
+    type: "RAM",
+    name: "TeamGroup T-Force Delta DDR5 32GB 5600MHz",
+    speed: 5600,
+    image: "/images/teamgroup-32gb-5600.jpg",
+    retailers: [{ site: "Amazon", priceCents: 15999 }],
+  },
+  {
+    type: "RAM",
+    name: "Patriot Viper DDR5 32GB 6000MHz",
+    speed: 6000,
+    image: "/images/patriot-32gb-6000.jpg",
+    retailers: [{ site: "Amazon", priceCents: 16999 }],
+  },
+  {
+    type: "RAM",
+    name: "Crucial DDR5 16GB 5200MHz",
+    speed: 5200,
+    image: "/images/crucial-16gb-5200.jpg",
+    retailers: [{ site: "Amazon", priceCents: 7999 }],
+  },
+
+  // ------------------ Storage ------------------
+  {
+    type: "Storage",
+    name: "Seagate Barracuda 2TB HDD",
+    storageType: "HDD",
+    image: "/images/seagate-2tb.jpg",
+    retailers: [{ site: "Amazon", priceCents: 5999 }],
+  },
+  {
+    type: "Storage",
+    name: "WD Blue 1TB HDD",
+    storageType: "HDD",
+    image: "/images/wd-1tb.jpg",
+    retailers: [{ site: "Amazon", priceCents: 4999 }],
+  },
+  {
+    type: "Storage",
+    name: "Samsung 870 Evo 1TB SSD",
+    storageType: "SSD",
+    image: "/images/samsung-870.jpg",
+    retailers: [{ site: "Amazon", priceCents: 10999 }],
+  },
+  {
+    type: "Storage",
+    name: "Crucial MX500 500GB SSD",
+    storageType: "SSD",
+    image: "/images/crucial-mx500.jpg",
+    retailers: [{ site: "Amazon", priceCents: 5999 }],
+  },
+  {
+    type: "Storage",
+    name: "Samsung 980 Pro 1TB NVMe",
+    storageType: "NVMe",
+    image: "/images/samsung-980-pro.jpg",
+    retailers: [{ site: "Amazon", priceCents: 14999 }],
+  },
+  {
+    type: "Storage",
+    name: "WD Black SN850 1TB NVMe",
+    storageType: "NVMe",
+    image: "/images/wd-black-sn850.jpg",
+    retailers: [{ site: "Amazon", priceCents: 15999 }],
+  },
+
+  // ------------------ Graphics ------------------
+  // Nvidia
+  {
+    type: "GPU",
+    name: "Nvidia RTX 4090",
+    brand: "Nvidia",
+    image: "/images/rtx-4090.jpg",
+    retailers: [{ site: "Amazon", priceCents: 159999 }],
+  },
+  {
+    type: "GPU",
+    name: "Nvidia RTX 4080",
+    brand: "Nvidia",
+    image: "/images/rtx-4080.jpg",
+    retailers: [{ site: "Amazon", priceCents: 119999 }],
+  },
+  {
+    type: "GPU",
+    name: "Nvidia RTX 4070",
+    brand: "Nvidia",
+    image: "/images/rtx-4070.jpg",
+    retailers: [{ site: "Amazon", priceCents: 69999 }],
+  },
+  // AMD
+  {
+    type: "GPU",
+    name: "AMD Radeon RX 7900 XTX",
+    brand: "AMD",
+    image: "/images/rx-7900xtx.jpg",
+    retailers: [{ site: "Amazon", priceCents: 99999 }],
+  },
+  {
+    type: "GPU",
+    name: "AMD Radeon RX 7800 XT",
+    brand: "AMD",
+    image: "/images/rx-7800xt.jpg",
+    retailers: [{ site: "Amazon", priceCents: 69999 }],
+  },
+  {
+    type: "GPU",
+    name: "AMD Radeon RX 7700 XT",
+    brand: "AMD",
+    image: "/images/rx-7700xt.jpg",
+    retailers: [{ site: "Amazon", priceCents: 59999 }],
+  },
+
+  // ------------------ Power Supply ------------------
+  {
+    type: "PSU",
+    name: "Corsair RM850x 850W 80+ Gold",
+    wattage: 850,
+    rating: "80+ Gold",
+    image: "/images/rm850x.jpg",
+    retailers: [{ site: "Amazon", priceCents: 14999 }],
+  },
+  {
+    type: "PSU",
+    name: "EVGA SuperNOVA 750W 80+ Platinum",
+    wattage: 750,
+    rating: "80+ Platinum",
+    image: "/images/evga-750w.jpg",
+    retailers: [{ site: "Amazon", priceCents: 15999 }],
+  },
+  {
+    type: "PSU",
+    name: "Seasonic Focus GX-650W 80+ Gold",
+    wattage: 650,
+    rating: "80+ Gold",
+    image: "/images/focus-gx-650.jpg",
+    retailers: [{ site: "Amazon", priceCents: 12999 }],
+  },
+  {
+    type: "PSU",
+    name: "CPU Cooler Master V850 850W 80+ Gold",
+    wattage: 850,
+    rating: "80+ Gold",
+    image: "/images/CPU Coolermaster-v850.jpg",
+    retailers: [{ site: "Amazon", priceCents: 13999 }],
+  },
+  {
+    type: "PSU",
+    name: "Corsair HX1000 1000W 80+ Platinum",
+    wattage: 1000,
+    rating: "80+ Platinum",
+    image: "/images/hx1000.jpg",
+    retailers: [{ site: "Amazon", priceCents: 19999 }],
+  },
+  {
+    type: "PSU",
+    name: "Thermaltake Toughpower 850W 80+ Gold",
+    wattage: 850,
+    rating: "80+ Gold",
+    image: "/images/toughpower-850.jpg",
+    retailers: [{ site: "Amazon", priceCents: 14499 }],
+  },
+
+  // ------------------ Cases ------------------
+  // ATX
+  {
+    type: "Case",
+    name: "NZXT H710",
+    size: "ATX",
+    image: "/images/nzxt-h710.jpg",
+    retailers: [{ site: "Amazon", priceCents: 16999 }],
+  },
+  {
+    type: "Case",
+    name: "Fractal Design Meshify 2",
+    size: "ATX",
+    image: "/images/meshify2.jpg",
+    retailers: [{ site: "Amazon", priceCents: 15999 }],
+  },
+  // MicroATX
+  {
+    type: "Case",
+    name: "CPU Cooler Master MasterBox Q300L",
+    size: "MicroATX",
+    image: "/images/q300l.jpg",
+    retailers: [{ site: "Amazon", priceCents: 8999 }],
+  },
+  {
+    type: "Case",
+    name: "Corsair 275R Airflow",
+    size: "MicroATX",
+    image: "/images/corsair-275r.jpg",
+    retailers: [{ site: "Amazon", priceCents: 9999 }],
+  },
+  // MiniITX
+  {
+    type: "Case",
+    name: "NZXT H210",
+    size: "MiniITX",
+    image: "/images/nzxt-h210.jpg",
+    retailers: [{ site: "Amazon", priceCents: 7999 }],
+  },
+  {
+    type: "Case",
+    name: "CPU Cooler Master NR200",
+    size: "MiniITX",
+    image: "/images/nr200.jpg",
+    retailers: [{ site: "Amazon", priceCents: 8999 }],
+  },
 ];

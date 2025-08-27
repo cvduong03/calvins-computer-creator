@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { components } from "../../componentsData.js";
+import { loadAddedPart } from "../../../loadAddedPart.jsx";
 import "./PartsTable.css";
 
 // PartsTable is a reusable component that renders the parts list
@@ -10,12 +11,14 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
   const [newPrice, setNewPrice] = useState("");
   const [newStore, setNewStore] = useState("");
 
+  // Modal popup in PartsTable
   const openModal = (type) => {
     setEditPart(type);
     setNewPrice(selectedParts[type].price || "");
     setNewStore(selectedParts[type].site || "");
   };
 
+  // empty modal to close
   const closeModal = () => setEditPart(null);
 
   const handleStoreChange = (store) => {
@@ -47,6 +50,17 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
     return partData ? partData.retailers : [];
   };
 
+  const partTypes = [
+    "CPU",
+    "CPU Cooler",
+    "Motherboard",
+    "Memory",
+    "Storage",
+    "Graphics Card",
+    "Power Supply",
+    "Case",
+  ];
+
   return (
     <>
       <div className="table-container">
@@ -65,268 +79,10 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
             </tr>
           </thead>
 
-          {/* Table body (lists all components of the build) */}
           <tbody>
-            {/* CPU row -  currently the only dynamic row */}
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="/product/cpu">
-                  CPU
-                </a>
-              </td>
-              <td className="td-selection">
-                {/* if cpu was selected, display its name, otherwise button */}
-                {selectedParts.CPU ? (
-                  <span>
-                    <img
-                      className="td-product-image"
-                      src={selectedParts.CPU.image}
-                    />
-                    {selectedParts.CPU.name}
-                  </span>
-                ) : (
-                  <a className="choose-button" href="/product/cpu">
-                    + Choose a CPU
-                  </a>
-                )}
-              </td>
-              <td className="td-price">
-                {selectedParts.CPU ? `$${selectedParts.CPU.price}` : ""}
-              </td>
-              <td className="td-settings">
-                {selectedParts.CPU && (
-                  <img
-                    className="gear-icon"
-                    // src="/images/gear-icon.png"
-                    src="/images/gear-icon.svg"
-                    style={{ cursor: "pointer", filter: "invert(100%)" }}
-                    onClick={() => openModal("CPU")}
-                  />
-                )}
-
-                {/*  */}
-              </td>
-              <td className="td-store">
-                {selectedParts.CPU ? selectedParts.CPU.site : ""}
-              </td>
-              <td className="td-buy">
-                {selectedParts.CPU ? (
-                  <button className="buy-button">Buy</button>
-                ) : (
-                  ""
-                )}
-              </td>
-              <td className="td-remove">
-                {selectedParts.CPU && (
-                  <button
-                    className="remove-button"
-                    onClick={() => onDelete("CPU")}
-                  >
-                    Remove
-                  </button>
-                )}
-              </td>
-            </tr>
-
-            {/* IGNORE BELOW ------------------------------------------------- */}
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  CPU Cooler
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a CPU Cooler
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Motherboard
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a Motherboard
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Memory
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose Memory
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Storage
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose Storage
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Graphics Card
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a Graphics Card
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Power Supply
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a Power Supply
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Case
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a Case
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Monitor
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a Monitor
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Mouse
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a Mouse
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Keyboard
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a Keyboard
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
-
-            <tr className="tr-product">
-              <td className="td-component">
-                <a className="component-name" href="">
-                  Headphone
-                </a>
-              </td>
-              <td className="td-selection">
-                <a className="choose-button" href="">
-                  + Choose a Headphone
-                </a>
-              </td>
-              <td className="td-price"></td>
-              <td className="td-settings"></td>
-              <td className="td-store"></td>
-              <td className="td-buy"></td>
-              <td className="td-remove"></td>
-            </tr>
+            {partTypes.map((type) =>
+              loadAddedPart(type, selectedParts, openModal, onDelete)
+            )}
           </tbody>
         </table>
       </div>
@@ -340,6 +96,7 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
             <label>
               Store:
               <select
+                className="store-select"
                 value={newStore}
                 onChange={(e) => handleStoreChange(e.target.value)}
               >
@@ -353,8 +110,9 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
             <br />
 
             <label>
-              Price: $
+              Price:
               <input
+                className="price-input"
                 type="number"
                 value={newPrice}
                 onChange={(e) => setNewPrice(e.target.value)}
@@ -362,8 +120,12 @@ export function PartsTable({ selectedParts = {}, onDelete, onUpdate }) {
             </label>
             <br />
 
-            <button onClick={saveChanges}>Save</button>
-            <button onClick={closeModal}>Cancel</button>
+            <button className="save-button" onClick={saveChanges}>
+              Save
+            </button>
+            <button className="cancel-button" onClick={closeModal}>
+              Cancel
+            </button>
           </div>
         </div>
       )}

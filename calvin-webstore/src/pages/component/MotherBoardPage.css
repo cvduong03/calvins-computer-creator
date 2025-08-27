@@ -16,35 +16,23 @@
 /* Setting width of each component column */
 .th-name,
 .td-name {
-  width: 30%;
+  width: 25%;
 }
-.th-core-count,
-.td-core-count {
-  width: 10%;
-}
-.th-core-clock,
-.td-core-clock {
+.th-socket,
+.td-socket {
   width: 15%;
 }
-.th-architecture,
-.td-architecture {
-  width: 10%;
-}
-.th-tdp,
-.td-tdp {
-  width: 5%;
-}
-.th-graphics,
-.td-graphics {
-  width: 10%;
+.th-size,
+.td-size {
+  width: 20%;
 }
 .th-retailer,
 .td-retailer {
-  width: 10%;
+  width: 25%;
 }
 .th-add,
 .td-add {
-  width: 5%;
+  width: 15%;
 }
 
 .select-retailer {
