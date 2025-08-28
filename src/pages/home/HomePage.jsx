@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { PartsTable } from "./PartsTable";
-import { TotalPrice } from "./TotalPrice";
+import { TotalPrice } from "./TotalPriceWatts";
 import { CompatibilityFilter } from "./CompatibilityFilter";
 
 export function HomePage() {

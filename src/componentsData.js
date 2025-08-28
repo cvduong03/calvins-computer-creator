@@ -393,7 +393,7 @@ export const components = [
     ],
   },
 
-  // ------------------ Graphics ------------------
+  // ------------------ Graphics Card ------------------
 
   {
     type: "Graphics Card",
@@ -467,8 +467,8 @@ export const components = [
     power: 575,
     image: "/images/parts/gpu/509032gb.jpg",
     retailers: [
-      { site: "Amazon", priceCents: 36999 },
-      { site: "Micro Center", priceCents: 36999 },
+      { site: "Amazon", priceCents: 249999 },
+      { site: "Newegg", priceCents: 239999 },
     ],
   },
 

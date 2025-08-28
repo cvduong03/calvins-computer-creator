@@ -1,0 +1,67 @@
+.total-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 5%;
+  margin-left: 5%;
+  background-color: rgba(13, 7, 23, 0.642);
+  color: white;
+}
+
+.total-wattage,
+.recommended-wattage {
+  padding-left: 30px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.tooltip-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #03030369;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tooltip-icon:hover {
+  background-color: #030303bc;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 400px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 4px;
+  position: absolute;
+  left: 850%;
+  bottom: 0%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
