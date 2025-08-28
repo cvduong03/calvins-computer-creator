@@ -17,3 +17,8 @@
 .compatibility-filter.success {
   background-color: rgba(43, 233, 78, 0.642);
 }
+
+.compatibility-message {
+  padding: 10px;
+  line-height: 1.3;
+}

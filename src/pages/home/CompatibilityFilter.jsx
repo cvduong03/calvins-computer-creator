@@ -5,11 +5,13 @@ export function CompatibilityFilter({ selectedParts }) {
   const cooler = selectedParts["CPU Cooler"];
   const mb = selectedParts["Motherboard"];
   const pcCase = selectedParts["Case"];
+  const gpu = selectedParts["Graphics Card"];
+  const psu = selectedParts["Power Supply"];
 
-  console.log("CPU:", cpu);
-  console.log("Cooler:", cooler);
-  console.log("Motherboard:", mb);
-  console.log("Case:", pcCase);
+  // console.log("CPU:", cpu);
+  // console.log("Cooler:", cooler);
+  // console.log("Motherboard:", mb);
+  // console.log("Case:", pcCase);
 
   // collecting warnings
   const warnings = [];
@@ -17,7 +19,7 @@ export function CompatibilityFilter({ selectedParts }) {
   // error if amd cpu with intel motherboard and vice versa
   if (cpu && mb && cpu.socket !== mb.socket) {
     warnings.push(
-      `CPU socket (${cpu.socket}) does not match Motherboard socket (${mb.socket})`
+      `CPU socket (${cpu.socket}) does not match Motherboard socket (${mb.socket}). Please choose an (${cpu.socket}) compatible board.`
     );
   }
 
@@ -27,12 +29,10 @@ export function CompatibilityFilter({ selectedParts }) {
     pcCase &&
     cooler.liquid === false &&
     cooler.size &&
-    cooler.size > pcCase.maxcoolersize
+    cooler.size > pcCase.maxcoolerheight
   ) {
     warnings.push(
-      `(${cooler.name}) is ${cooler.size}mm long and too big for (
-              ${pcCase.name}) which has a max height of ${pcCase.maxcoolersize}mm.
-              Choose something smaller than ${pcCase.maxcoolersize}mm`
+      `(${cooler.name}) is ${cooler.size}mm tall which is too big for (${pcCase.name}) which has a max cooler height of ${pcCase.maxcoolerheight}mm. Please choose something that is ${pcCase.maxcoolerheight}mm or smaller.`
     );
   }
 
@@ -43,25 +43,18 @@ export function CompatibilityFilter({ selectedParts }) {
     cooler.liquid === true &&
     pcCase.aio === true &&
     cooler.size &&
-    cooler.size > pcCase.maxcoolersize
+    cooler.size > pcCase.maxaiosize
   ) {
     warnings.push(
-      `(${cooler.name}) is ${cooler.size}mm long and too big for (
-              ${pcCase.name}) which has a max height of ${pcCase.maxcoolersize}mm.
-              Choose something smaller than ${pcCase.maxcoolersize}mm`
+      `(${cooler.name}) is ${cooler.size}mm long and too big for (${pcCase.name}) which has a max radiator size of ${pcCase.maxaiosize}mm. Please choose a cooler that is ${pcCase.maxaiosize}mm or smaller.`
     );
   }
 
   // error if liquid cooler is fitted to a case that does not support liquid cooling
-  if (
-    cooler &&
-    pcCase &&
-    cooler.liquid === true &&
-    pcCase.aio === false &&
-    cooler.size &&
-    cooler.size > pcCase.maxcoolersize
-  ) {
-    warnings.push(`(${pcCase.name}) does not support liquid coolers`);
+  if (cooler && pcCase && cooler.liquid === true && pcCase.aio === false) {
+    warnings.push(
+      `(${pcCase.name}) does not support liquid coolers. Please choose an air cooler smaller than the supported ${pcCase.maxcoolerheight}mm height.`
+    );
   }
 
   // error if motherboard does not fit the case's supported formats
@@ -74,10 +67,34 @@ export function CompatibilityFilter({ selectedParts }) {
 
     if (!fitRules[pcCase.size].includes(mb.size)) {
       warnings.push(
-        `(${mb.name}) does not fit inside (${pcCase.name}). Please choose a suported size or smaller (ATX > MATX > ITX)`
+        `(${mb.name}) does not fit inside (${pcCase.name}). Please choose either a larger case or a supported motherboard size or smaller (ATX > MATX > ITX).`
       );
     }
   }
+
+  // error if graphics card length is not supported by case
+  if (pcCase && gpu && gpu.length > pcCase.gpu) {
+    warnings.push(
+      `(${gpu.name}) is ${gpu.length}mm long and too big for (${pcCase.name}) which has a max GPU length of ${pcCase.gpu}mm. Please choose either a larger case or a GPU smaller than ${pcCase.gpu}mm.`
+    );
+  }
+
+  // error if power supply is atx but case only supports sfx
+  if (psu && pcCase && pcCase.psu) {
+    const fitRules = {
+      SFX: ["SFX"],
+      ATX: ["ATX", "SFX"],
+    };
+
+    if (!fitRules[pcCase.psu].includes(psu.size)) {
+      warnings.push(
+        `(${psu.name}) is (${psu.size}) which is not supported by (${pcCase.name}). Please choose an (${pcCase.psu}) power supply.`
+      );
+    }
+  }
+
+  // error if power supply is too low wattage for the system
+  // before this, calculate recommended wattage.
 
   // return all potential errors, otherwise print a good message
   return (
@@ -89,9 +106,15 @@ export function CompatibilityFilter({ selectedParts }) {
       >
         <ul>
           {warnings.length > 0 ? (
-            warnings.map((message, index) => <li key={index}>{message}</li>)
+            warnings.map((message, index) => (
+              <li className="compatibility-message" key={index}>
+                {message}
+              </li>
+            ))
           ) : (
-            <li>No incompatabilities found!</li>
+            <li className="compatibility-message">
+              No incompatabilities found!
+            </li>
           )}
         </ul>
       </div>

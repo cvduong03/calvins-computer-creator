@@ -24,7 +24,7 @@ export function PartsTable({ selectedParts = {}, onDelete }) {
         {/* Start of parts table */}
         <table>
           {/* Table header */}
-          <thead>
+          <thead className="thead-title">
             <tr>
               <th className="th-component">Component</th>
               <th className="th-selection">Selection</th>
