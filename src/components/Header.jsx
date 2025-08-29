@@ -6,22 +6,13 @@ export function Header() {
       <div className="header">
         <div className="left-header">
           <a href="" className="link">
-            <img
-              className="c-logo"
-              src="/calvins-computer-creator/images/c-logo.png"
-            />
+            <img className="c-logo" src="/images/c-logo.png" />
           </a>
           <a href="" className="link">
-            <img
-              className="c-logo"
-              src="/calvins-computer-creator/images/c-logo.png"
-            />
+            <img className="c-logo" src="/images/c-logo.png" />
           </a>
           <a href="" className="link">
-            <img
-              className="c-logo"
-              src="/calvins-computer-creator/images/c-logo.png"
-            />
+            <img className="c-logo" src="/images/c-logo.png" />
           </a>
         </div>
 

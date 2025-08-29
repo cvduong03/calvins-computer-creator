@@ -16,7 +16,7 @@
 /* Setting width of each component column */
 .th-name,
 .td-name {
-  width: 50%;
+  width: 40%;
 }
 .th-memory,
 .td-memory {
@@ -32,11 +32,11 @@
 }
 .th-retailer,
 .td-retailer {
-  width: 10%;
+  width: 15%;
 }
 .th-add,
 .td-add {
-  width: 10%;
+  width: 15%;
 }
 
 .select-retailer {
