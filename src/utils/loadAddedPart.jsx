@@ -13,7 +13,9 @@ export function loadAddedPart(type, selectedParts, onDelete) {
         {/* <a className="component-name" href={`/products/${preppedLink}`}>
           {type}
         </a> */}
-        <Link to={`/products/${preppedLink}`}>{type}</Link>
+        <Link className="component-name" to={`/products/${preppedLink}`}>
+          {type}
+        </Link>
       </td>
 
       <td className="td-selection">
@@ -27,7 +29,9 @@ export function loadAddedPart(type, selectedParts, onDelete) {
           // <a className="choose-button" href={`/products/${preppedLink}`}>
           //   + Choose a {type}
           // </a>
-          <Link to={`/products/${preppedLink}`}>+ Choose a type</Link>
+          <Link className="choose-button" to={`/products/${preppedLink}`}>
+            + Choose a type
+          </Link>
         )}
       </td>
 
