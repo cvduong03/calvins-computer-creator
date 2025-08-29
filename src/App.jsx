@@ -14,7 +14,7 @@ import "./App.css";
 function App() {
   return (
     <Routes>
-      <Route index element={<HomePage />} />
+      <Route path="/calvins-computer-creator" element={<HomePage />} />
       <Route path="/products/cpu" element={<CpuPage />} />
       <Route path="/products/cpu-cooler" element={<CoolerPage />} />
       <Route path="/products/motherboard" element={<MotherboardPage />} />

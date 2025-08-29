@@ -5,19 +5,40 @@ export function Header() {
     <>
       <div className="header">
         <div className="left-header">
-          <a href="" className="link">
-            <img className="c-logo" src="/images/c-logo.png" />
+          {/* <a href="" className="link">
+            <img
+              className="c-logo"
+              src="/calvins-computer-creator/images/c-logo.png"
+            />
           </a>
           <a href="" className="link">
-            <img className="c-logo" src="/images/c-logo.png" />
+            <img
+              className="c-logo"
+              src="/calvins-computer-creator/images/c-logo.png"
+            />
           </a>
           <a href="" className="link">
-            <img className="c-logo" src="/images/c-logo.png" />
-          </a>
+            <img
+              className="c-logo"
+              src="/calvins-computer-creator/images/c-logo.png"
+            />
+          </a> */}
+          <Link
+            className="c-logo"
+            to="/calvins-computer-creator/images/c-logo.png"
+          ></Link>
+          <Link
+            className="c-logo"
+            to="/calvins-computer-creator/images/c-logo.png"
+          ></Link>
+          <Link
+            className="c-logo"
+            to="/calvins-computer-creator/images/c-logo.png"
+          ></Link>
         </div>
 
         <div className="middle-header">
-          <a href="" className="link">
+          {/* <a href="" className="link">
             <span className="phones-link">Build</span>
           </a>
           <a href="" className="link">
@@ -28,12 +49,11 @@ export function Header() {
           </a>
           <a href="" className="link">
             <span className="audio-link">Showcase</span>
-          </a>
+          </a> */}
+          
         </div>
 
-        <div className="right-header">
-          {/* right side */}
-        </div>
+        <div className="right-header">{/* right side */}</div>
       </div>
     </>
   );
