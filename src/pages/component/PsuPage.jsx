@@ -38,7 +38,7 @@ export function PsuPage() {
                     )}
                     <span className="psu-name-text">{psu.name}</span>
                   </td>
-                  <td className="td-wattage">{psu.wattage}</td>
+                  <td className="td-wattage">{psu.wattage}W</td>
                   <td className="td-rating">{psu.rating}</td>
                   <td className="td-modular">{psu.modular}</td>
                   <td className="td-size">{psu.size}</td>
