@@ -18,9 +18,12 @@ export function CasePage() {
           <thead>
             <tr>
               <th className="th-name">Name</th>
-              <th className="th-size">Size</th>
-              <th className="th-retailer"></th>
-              <th className="th-add"></th>
+              <th className="th-type">Type</th>
+              <th className="th-height">Cooler Height</th>
+              <th className="th-aio">AIO Support</th>
+              <th className="th-gpu">GPU Length</th>
+              <th className="th-retailer">Store</th>
+              <th className="th-add">Add</th>
             </tr>
           </thead>
 
@@ -35,8 +38,10 @@ export function CasePage() {
                     )}
                     <span className="pcCase-name-text">{pcCase.name}</span>
                   </td>
-                  <td className="td-pcCase-type">{pcCase.size}</td>
-                  <td className="td-size">{pcCase.speed}</td>
+                  <td className="td-type">{pcCase.size}</td>
+                  <td className="td-height">{pcCase.maxcoolerheight}mm</td>
+                  <td className="td-aio">{pcCase.maxaiosize}mm</td>
+                  <td className="th-gpu">{pcCase.gpu}mm</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"

@@ -20,6 +20,7 @@ export function MotherboardPage() {
               <th className="th-name">Name</th>
               <th className="th-socket">Socket</th>
               <th className="th-size">Size</th>
+              <th className="th-wifi">Wi-Fi</th>
               <th className="th-retailer"></th>
               <th className="th-add"></th>
             </tr>
@@ -38,6 +39,7 @@ export function MotherboardPage() {
                   </td>
                   <td className="td-socket">{mb.socket}</td>
                   <td className="td-size">{mb.size}</td>
+                  <td className="td-wifi">{mb.wifi}</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"

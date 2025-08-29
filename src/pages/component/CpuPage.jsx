@@ -25,7 +25,7 @@ export function CpuPage() {
               <th className="th-core-count">Core Count</th>
               <th className="th-core-clock">Core Clock</th>
               <th className="th-socket">Socket</th>
-              <th className="th-power">power</th>
+              <th className="th-power">Power</th>
               <th className="th-graphics">Integrated Graphics</th>
               <th className="th-retailer"></th>
               <th className="th-add"></th>
@@ -48,7 +48,7 @@ export function CpuPage() {
                   <td className="td-core-count">{cpu.cores}</td>
                   <td className="td-core-clock">{cpu.clock}</td>
                   <td className="td-socket">{cpu.socket}</td>
-                  <td className="td-tdp">{cpu.power}</td>
+                  <td className="td-tdp">{cpu.power}W</td>
                   <td className="td-graphics">{cpu.graphics}</td>
                   <td className="td-retailer">
                     <select

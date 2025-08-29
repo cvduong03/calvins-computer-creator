@@ -16,11 +16,11 @@
 /* Setting width of each component column */
 .th-name,
 .td-name {
-  width: 30%;
+  width: 50%;
 }
 .th-subtype,
 .td-subtype {
-  width: 20%;
+  width: 10%;
 }
 .th-size,
 .td-size {
@@ -28,11 +28,11 @@
 }
 .th-retailer,
 .td-retailer {
-  width: 25%;
+  width: 15%;
 }
 .th-add,
 .td-add {
-  width: 15%;
+  width: 10%;
 }
 
 .select-retailer {

@@ -20,8 +20,8 @@ export function MemoryPage() {
               <th className="th-name">Name</th>
               <th className="th-size">Size</th>
               <th className="th-speed">Speed</th>
-              <th className="th-retailer"></th>
-              <th className="th-add"></th>
+              <th className="th-retailer">Store</th>
+              <th className="th-add">Add</th>
             </tr>
           </thead>
 

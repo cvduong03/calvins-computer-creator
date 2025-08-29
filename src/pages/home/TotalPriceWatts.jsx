@@ -4,17 +4,6 @@ import { calculatePriceWatts } from "../../utils/calculatePriceWatts";
 export function TotalPrice({ selectedParts }) {
   const { totalPrice, totalWattage, recommendedWattage } =
     calculatePriceWatts(selectedParts);
-  // const totalPrice = Object.values(selectedParts).reduce(
-  //   (sum, part) => sum + (part.price || 0),
-  //   0
-  // );
-
-  // const totalWattage = Object.values(selectedParts).reduce(
-  //   (sum, part) => sum + (part.power || 0),
-  //   0
-  // );
-
-  // const recommendedWattage = totalWattage > 0 ? recommendedWattage + 300 : 0;
 
   return (
     <div className="total-bar">

@@ -22,13 +22,17 @@
 .td-storage-type {
   width: 20%;
 }
+.th-storage-size,
+.td-storage-size {
+  width: 10%;
+}
 .th-size,
 .td-size {
-  width: 15%;
+  width: 10%;
 }
 .th-retailer,
 .td-retailer {
-  width: 25%;
+  width: 15%;
 }
 .th-add,
 .td-add {

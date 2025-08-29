@@ -37,7 +37,7 @@ export function CoolerPage() {
                     <span className="cooler-name-text">{cooler.name}</span>
                   </td>
                   <td className="td-subtype">{cooler.subtype}</td>
-                  <td className="td-size">{cooler.size}</td>
+                  <td className="td-size">{cooler.size}mm</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"

@@ -21,8 +21,8 @@ export function GpuPage() {
               <th className="th-memory">Memory</th>
               <th className="th-length">Length</th>
               <th className="th-power">Power</th>
-              <th className="th-retailer"></th>
-              <th className="th-add"></th>
+              <th className="th-retailer">Store</th>
+              <th className="th-add">Add</th>
             </tr>
           </thead>
 
@@ -38,8 +38,8 @@ export function GpuPage() {
                     <span className="gpu-name-text">{gpu.name}</span>
                   </td>
                   <td className="td-memory">{gpu.memory}</td>
-                  <td className="td-length">{gpu.length}</td>
-                  <td className="td-power">{gpu.power}</td>
+                  <td className="td-length">{gpu.length}mm</td>
+                  <td className="td-power">{gpu.power}W</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"

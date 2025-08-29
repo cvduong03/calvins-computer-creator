@@ -21,8 +21,9 @@ export function PsuPage() {
               <th className="th-wattage">Wattage</th>
               <th className="th-rating">Rating</th>
               <th className="th-modular">Modular</th>
-              <th className="th-retailer"></th>
-              <th className="th-add"></th>
+              <th className="th-size">Type</th>
+              <th className="th-retailer">Store</th>
+              <th className="th-add">Add</th>
             </tr>
           </thead>
 
@@ -37,9 +38,10 @@ export function PsuPage() {
                     )}
                     <span className="psu-name-text">{psu.name}</span>
                   </td>
-                  <td className="td-memory">{psu.memory}</td>
-                  <td className="td-length">{psu.length}</td>
-                  <td className="td-power">{psu.power}</td>
+                  <td className="td-wattage">{psu.wattage}</td>
+                  <td className="td-rating">{psu.rating}</td>
+                  <td className="td-modular">{psu.modular}</td>
+                  <td className="td-size">{psu.size}</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"

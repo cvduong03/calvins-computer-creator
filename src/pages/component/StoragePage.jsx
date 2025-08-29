@@ -20,8 +20,8 @@ export function StoragePage() {
               <th className="th-name">Name</th>
               <th className="th-storageType">Storage Type</th>
               <th className="th-size">Size</th>
-              <th className="th-retailer"></th>
-              <th className="th-add"></th>
+              <th className="th-retailer">Store</th>
+              <th className="th-add">Add</th>
             </tr>
           </thead>
 
@@ -36,8 +36,8 @@ export function StoragePage() {
                     )}
                     <span className="Storage-name-text">{storage.name}</span>
                   </td>
-                  <td className="td-storage-type">{storage.size}</td>
-                  <td className="td-size">{storage.speed}</td>
+                  <td className="td-storage-type">{storage.storageType}</td>
+                  <td className="td-size">{storage.size}</td>
                   <td className="td-retailer">
                     <select
                       className="select-retailer"

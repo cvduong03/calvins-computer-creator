@@ -16,23 +16,31 @@
 /* Setting width of each component column */
 .th-name,
 .td-name {
-  width: 30%;
+  width: 50%;
 }
-.th-subtype,
-.td-subtype {
-  width: 20%;
+.th-wattage,
+.td-wattage {
+  width: 10%;
+}
+.th-rating,
+.td-rating {
+  width: 10%;
+}
+.th-modular,
+.td-modular {
+  width: 10%;
 }
 .th-size,
 .td-size {
-  width: 15%;
+  width: 5%;
 }
 .th-retailer,
 .td-retailer {
-  width: 25%;
+  width: 10%;
 }
 .th-add,
 .td-add {
-  width: 15%;
+  width: 5%;
 }
 
 .select-retailer {

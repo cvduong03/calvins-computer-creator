@@ -16,23 +16,31 @@
 /* Setting width of each component column */
 .th-name,
 .td-name {
-  width: 30%;
+  width: 40%;
 }
-.th-storage-type,
-.td-storage-type {
-  width: 20%;
+.th-type,
+.td-type {
+  width: 5%;
 }
-.th-size,
-.td-size {
-  width: 15%;
+.th-height,
+.td-height {
+  width: 10%;
+}
+.th-aio,
+.td-aio {
+  width: 10%;
+}
+.th-gpu,
+.td-gpu {
+  width: 10%;
 }
 .th-retailer,
 .td-retailer {
-  width: 25%;
+  width: 15%;
 }
 .th-add,
 .td-add {
-  width: 15%;
+  width: 10%;
 }
 
 .select-retailer {
