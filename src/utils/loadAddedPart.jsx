@@ -1,5 +1,6 @@
 import { components } from "../componentsData";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function loadAddedPart(type, selectedParts, onDelete) {
   const part = selectedParts[type]; // dynamically get part by type
@@ -9,9 +10,10 @@ export function loadAddedPart(type, selectedParts, onDelete) {
   return (
     <tr key={type} className="tr-product">
       <td className="td-component">
-        <a className="component-name" href={`/products/${preppedLink}`}>
+        {/* <a className="component-name" href={`/products/${preppedLink}`}>
           {type}
-        </a>
+        </a> */}
+        <Link to={`/products/${preppedLink}`}>{type}</Link>
       </td>
 
       <td className="td-selection">
@@ -22,9 +24,10 @@ export function loadAddedPart(type, selectedParts, onDelete) {
             {part.name}
           </span>
         ) : (
-          <a className="choose-button" href={`/products/${preppedLink}`}>
-            + Choose a {type}
-          </a>
+          // <a className="choose-button" href={`/products/${preppedLink}`}>
+          //   + Choose a {type}
+          // </a>
+          <Link to={`/products/${preppedLink}`}>+ Choose a type</Link>
         )}
       </td>
 
