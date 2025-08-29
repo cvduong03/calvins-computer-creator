@@ -23,18 +23,24 @@ export function Header() {
               src="/calvins-computer-creator/images/c-logo.png"
             />
           </a> */}
-          <Link
-            className="c-logo"
-            to="/calvins-computer-creator/images/c-logo.png"
-          ></Link>
-          <Link
-            className="c-logo"
-            to="/calvins-computer-creator/images/c-logo.png"
-          ></Link>
-          <Link
-            className="c-logo"
-            to="/calvins-computer-creator/images/c-logo.png"
-          ></Link>
+          <Link to="/">
+            <img
+              className="c-logo"
+              src="/calvins-computer-creator/images/c-logo.png"
+            />
+          </Link>
+          <Link to="/">
+            <img
+              className="c-logo"
+              src="/calvins-computer-creator/images/c-logo.png"
+            />
+          </Link>
+          <Link to="/">
+            <img
+              className="c-logo"
+              src="/calvins-computer-creator/images/c-logo.png"
+            />
+          </Link>
         </div>
 
         <div className="middle-header">
@@ -50,7 +56,6 @@ export function Header() {
           <a href="" className="link">
             <span className="audio-link">Showcase</span>
           </a> */}
-          
         </div>
 
         <div className="right-header">{/* right side */}</div>
