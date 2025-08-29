@@ -1,7 +1,7 @@
 import "./MotherboardPage.css";
 import { components } from "../../componentsData";
 import { Header } from "../../components/Header";
-import { useAddPart } from "../../../useAddPart";
+import { useAddPart } from "../../utils/useAddPart";
 
 export function MotherboardPage() {
   const { selectedRetailers, handleSelectChange, handleAddClick } =

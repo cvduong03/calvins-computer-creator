@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { components } from "../../componentsData.js";
-import { loadAddedPart } from "../../../loadAddedPart.jsx";
+import { loadAddedPart } from "../../utils/loadAddedPart.jsx";
 import "./PartsTable.css";
 
 // PartsTable is a reusable component that renders the parts list

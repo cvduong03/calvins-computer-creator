@@ -1,17 +1,15 @@
 import "./CompatibilityFilter.css";
+import { calculatePriceWatts } from "../../utils/calculatePriceWatts";
 
 export function CompatibilityFilter({ selectedParts }) {
+  const { recommendedWattage } = calculatePriceWatts(selectedParts);
+
   const cpu = selectedParts["CPU"];
   const cooler = selectedParts["CPU Cooler"];
   const mb = selectedParts["Motherboard"];
   const pcCase = selectedParts["Case"];
   const gpu = selectedParts["Graphics Card"];
   const psu = selectedParts["Power Supply"];
-
-  // console.log("CPU:", cpu);
-  // console.log("Cooler:", cooler);
-  // console.log("Motherboard:", mb);
-  // console.log("Case:", pcCase);
 
   // collecting warnings
   const warnings = [];
@@ -95,6 +93,11 @@ export function CompatibilityFilter({ selectedParts }) {
 
   // error if power supply is too low wattage for the system
   // before this, calculate recommended wattage.
+  if (psu && recommendedWattage && psu.wattage < recommendedWattage) {
+    warnings.push(
+      `(${psu.name}) is not recommended to power the system safely. Please choose the nearest 50 or 100 Watt power supply from the recommended ${recommendedWattage} Watts.`
+    );
+  }
 
   // return all potential errors, otherwise print a good message
   return (

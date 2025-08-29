@@ -476,12 +476,12 @@ export const components = [
 
   {
     type: "Power Supply",
-    name: "Corsair RM1000e 1000 W Fully Modular ATX Power Supply",
-    wattage: 1000,
-    rating: "Gold",
-    modular: "Yes",
+    name: "PowerSpec PS 650BF 650 W ATX Power Supply",
+    wattage: 650,
+    rating: "Bronze",
+    modular: "No",
     size: "ATX",
-    image: "/images/parts/psu/rm1000e.jpg",
+    image: "/images/parts/psu/powerSpec650.jpg",
     retailers: [
       { site: "Amazon", priceCents: 14999 },
       { site: "Newegg", priceCents: 14999 },
