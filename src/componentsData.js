@@ -3,7 +3,7 @@ export const components = [
   {
     type: "CPU",
     name: "AMD Ryzen 7 9800X3D",
-    image: "/images/parts/cpu/9800X3D.jpg",
+    image: "/calvins-computer-creator/images/parts/cpu/9800X3D.jpg",
     cores: "8C, 16T",
     clock: "4.7GHz, 5.2GHz Boost",
     socket: "AMD",
@@ -19,7 +19,7 @@ export const components = [
   {
     type: "CPU",
     name: "AMD Ryzen 7 9700X",
-    image: "/images/parts/cpu/9700X.jpg",
+    image: "/calvins-computer-creator/images/parts/cpu/9700X.jpg",
     cores: "8C, 16T",
     clock: "3.8GHz, 5.5GHz Boost",
     socket: "AMD",
@@ -35,7 +35,7 @@ export const components = [
   {
     type: "CPU",
     name: "AMD Ryzen 5 9600X",
-    image: "/images/parts/cpu/9600X.jpg",
+    image: "/calvins-computer-creator/images/parts/cpu/9600X.jpg",
     cores: "6C, 12T",
     clock: "3.9GHz, 5.4GHz Boost",
     socket: "AMD",
@@ -51,7 +51,7 @@ export const components = [
   {
     type: "CPU",
     name: "Intel Core Ultra 9 285K",
-    image: "/images/parts/cpu/285K.jpg",
+    image: "/calvins-computer-creator/images/parts/cpu/285K.jpg",
     cores: "24C, 24T",
     clock: "4.6GHz, 5.7GHz Boost",
     socket: "Intel",
@@ -67,7 +67,7 @@ export const components = [
   {
     type: "CPU",
     name: "Intel Core Ultra 7 265K",
-    image: "/images/parts/cpu/265K.jpg",
+    image: "/calvins-computer-creator/images/parts/cpu/265K.jpg",
     cores: "20C, 20T",
     clock: "4.6GHz, 5.5GHz Boost",
     socket: "Intel",
@@ -83,7 +83,7 @@ export const components = [
   {
     type: "CPU",
     name: "Intel Core Ultra 5 245K",
-    image: "/images/parts/cpu/245K.jpg",
+    image: "/calvins-computer-creator/images/parts/cpu/245K.jpg",
     cores: "14C, 14T",
     clock: "4.6GHz, 5.2GHz Boost",
     socket: "Intel",
@@ -104,7 +104,7 @@ export const components = [
     liquid: false,
     subtype: "Air",
     size: 155,
-    image: "/images/parts/cooler/thermalright.jpg",
+    image: "/calvins-computer-creator/images/parts/cooler/thermalright.jpg",
     retailers: [
       { site: "Amazon", priceCents: 3499 },
       { site: "Micro Center", priceCents: 4999 },
@@ -116,7 +116,7 @@ export const components = [
     liquid: false,
     subtype: "Air",
     size: 165,
-    image: "/images/parts/cooler/noctuaD15.jpg",
+    image: "/calvins-computer-creator/images/parts/cooler/noctuaD15.jpg",
     retailers: [
       { site: "Amazon", priceCents: 12994 },
       { site: "Newegg", priceCents: 10878 },
@@ -129,7 +129,7 @@ export const components = [
     liquid: false,
     subtype: "Air",
     size: 37,
-    image: "/images/parts/cooler/noctuaL9.jpg",
+    image: "/calvins-computer-creator/images/parts/cooler/noctuaL9.jpg",
     retailers: [
       { site: "Amazon", priceCents: 5999 },
       { site: "Newegg", priceCents: 6249 },
@@ -142,7 +142,7 @@ export const components = [
     liquid: true,
     subtype: "Liquid",
     size: 360,
-    image: "/images/parts/cooler/arctic360.jpg",
+    image: "/calvins-computer-creator/images/parts/cooler/arctic360.jpg",
     retailers: [
       { site: "Amazon", priceCents: 8499 },
       { site: "Newegg", priceCents: 10999 },
@@ -155,7 +155,7 @@ export const components = [
     liquid: true,
     subtype: "Liquid",
     size: 240,
-    image: "/images/parts/cooler/kraken240.jpg",
+    image: "/calvins-computer-creator/images/parts/cooler/kraken240.jpg",
     retailers: [
       { site: "Amazon", priceCents: 13999 },
       { site: "Newegg", priceCents: 14299 },
@@ -167,7 +167,7 @@ export const components = [
     liquid: true,
     subtype: "Liquid",
     size: 360,
-    image: "/images/parts/cooler/cm360.jpg",
+    image: "/calvins-computer-creator/images/parts/cooler/cm360.jpg",
     retailers: [
       { site: "Amazon", priceCents: 11999 },
       { site: "Newegg", priceCents: 12199 },
@@ -182,7 +182,7 @@ export const components = [
     socket: "AMD",
     size: "ATX",
     wifi: "Yes",
-    image: "/images/parts/motherboard/amdATX.jpg",
+    image: "/calvins-computer-creator/images/parts/motherboard/amdATX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 16899 },
       { site: "Newegg", priceCents: 17999 },
@@ -194,7 +194,7 @@ export const components = [
     socket: "AMD",
     size: "MATX",
     wifi: "Yes",
-    image: "/images/parts/motherboard/amdMATX.jpg",
+    image: "/calvins-computer-creator/images/parts/motherboard/amdMATX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 14999 },
       { site: "Newegg", priceCents: 15299 },
@@ -206,7 +206,7 @@ export const components = [
     socket: "AMD",
     size: "ITX",
     wifi: "Yes",
-    image: "/images/parts/motherboard/amdITX.jpg",
+    image: "/calvins-computer-creator/images/parts/motherboard/amdITX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 29999 },
       { site: "Newegg", priceCents: 30499 },
@@ -219,7 +219,7 @@ export const components = [
     socket: "Intel",
     size: "ATX",
     wifi: "Yes",
-    image: "/images/parts/motherboard/intelATX.jpg",
+    image: "/calvins-computer-creator/images/parts/motherboard/intelATX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 23999 },
       { site: "Newegg", priceCents: 23999 },
@@ -231,7 +231,7 @@ export const components = [
     socket: "Intel",
     size: "MATX",
     wifi: "Yes",
-    image: "/images/parts/motherboard/intelMATX.jpg",
+    image: "/calvins-computer-creator/images/parts/motherboard/intelMATX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 16999 },
       { site: "Newegg", priceCents: 16999 },
@@ -244,7 +244,7 @@ export const components = [
     socket: "Intel",
     size: "ITX",
     wifi: "Yes",
-    image: "/images/parts/motherboard/intelITX.jpg",
+    image: "/calvins-computer-creator/images/parts/motherboard/intelITX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 19999 },
       { site: "Newegg", priceCents: 19499 },
@@ -257,7 +257,7 @@ export const components = [
     name: "Corsair Vengeance RGB 32GB DDR5 6000MHz",
     size: "32GB",
     speed: "DDR5-60000MHz",
-    image: "/images/parts/memory/corsair32.jpg",
+    image: "/calvins-computer-creator/images/parts/memory/corsair32.jpg",
     retailers: [
       { site: "Amazon", priceCents: 11499 },
       { site: "Newegg", priceCents: 10599 },
@@ -270,7 +270,7 @@ export const components = [
     name: "TEAMGROUP T-Create Expert 32 GB DDR5 6000MHz",
     size: "32GB",
     speed: "DDR5-6000MHz",
-    image: "/images/parts/memory/team32.jpg",
+    image: "/calvins-computer-creator/images/parts/memory/team32.jpg",
     retailers: [
       { site: "Amazon", priceCents: 9999 },
       { site: "Newegg", priceCents: 9999 },
@@ -282,7 +282,7 @@ export const components = [
     name: "G.Skill Trident Z5 RGB DDR5 64GB 6400MHz",
     size: "64GB",
     speed: "DDR5-6400MHz",
-    image: "/images/parts/memory/gskill64.jpg",
+    image: "/calvins-computer-creator/images/parts/memory/gskill64.jpg",
     retailers: [
       { site: "Amazon", priceCents: 11499 },
       { site: "Newegg", priceCents: 10599 },
@@ -295,7 +295,7 @@ export const components = [
     name: "Crucial Classic DDR5 32GB 5600MHz",
     size: "16GB",
     speed: "DDR5-5600MHz",
-    image: "/images/parts/memory/crucial16.jpg",
+    image: "/calvins-computer-creator/images/parts/memory/crucial16.jpg",
     retailers: [{ site: "Amazon", priceCents: 6498 }],
   },
   {
@@ -303,7 +303,7 @@ export const components = [
     name: "Kingston FURY Beast DDR5 16GB 5200MHz",
     size: "16GB",
     speed: "DDR5-5200MHz",
-    image: "/images/parts/memory/kingston16.jpg",
+    image: "/calvins-computer-creator/images/parts/memory/kingston16.jpg",
     retailers: [
       { site: "Amazon", priceCents: 5999 },
       { site: "Newegg", priceCents: 5999 },
@@ -314,7 +314,7 @@ export const components = [
     name: "Corsair Vengeance DDR5 128GB 6400MHz",
     size: "128GB",
     speed: "DDR5-6400MHz",
-    image: "/images/parts/memory/corsair128.jpg",
+    image: "/calvins-computer-creator/images/parts/memory/corsair128.jpg",
     retailers: [
       { site: "Amazon", priceCents: 33999 },
       { site: "Newegg", priceCents: 35999 },
@@ -327,7 +327,7 @@ export const components = [
     name: "Samsung 990 Pro 2 TB",
     storageType: "NVME",
     size: "2TB",
-    image: "/images/parts/storage/990pro2tb.jpg",
+    image: "/calvins-computer-creator/images/parts/storage/990pro2tb.jpg",
     retailers: [
       { site: "Amazon", priceCents: 15999 },
       { site: "Newegg", priceCents: 15999 },
@@ -340,7 +340,7 @@ export const components = [
     name: "Crucial P3 Plus 1 TB",
     storageType: "NVME",
     size: "1TB",
-    image: "/images/parts/storage/p3plus1tb.jpg",
+    image: "/calvins-computer-creator/images/parts/storage/p3plus1tb.jpg",
     retailers: [
       { site: "Amazon", priceCents: 6199 },
       { site: "Newegg", priceCents: 6199 },
@@ -351,7 +351,7 @@ export const components = [
     name: "Western Digital WD_Black SN850X 2 TB",
     storageType: "NVME",
     size: "2TB",
-    image: "/images/parts/storage/wd2tb.jpg",
+    image: "/calvins-computer-creator/images/parts/storage/wd2tb.jpg",
     retailers: [
       { site: "Amazon", priceCents: 12999 },
       { site: "Newegg", priceCents: 14999 },
@@ -364,7 +364,7 @@ export const components = [
     name: "Samsung 990 EVO Plus 2 TB",
     storageType: "NVME",
     size: "2TB",
-    image: "/images/parts/storage/990evo2tb.jpg",
+    image: "/calvins-computer-creator/images/parts/storage/990evo2tb.jpg",
     retailers: [
       { site: "Amazon", priceCents: 15999 },
       { site: "Newegg", priceCents: 15999 },
@@ -377,7 +377,7 @@ export const components = [
     name: "Seagate Barracuda Compute 2 TB",
     storageType: "HDD",
     size: "2TB",
-    image: "/images/parts/storage/seagate2tb.jpg",
+    image: "/calvins-computer-creator/images/parts/storage/seagate2tb.jpg",
     retailers: [
       { site: "Amazon", priceCents: 6699 },
       { site: "Newegg", priceCents: 7099 },
@@ -390,7 +390,7 @@ export const components = [
     name: "Samsung 870 Evo 1 TB",
     storageType: "SSD",
     size: "1TB",
-    image: "/images/parts/storage/870evo1tb.jpg",
+    image: "/calvins-computer-creator/images/parts/storage/870evo1tb.jpg",
     retailers: [
       { site: "Amazon", priceCents: 7999 },
       { site: "Newegg", priceCents: 8499 },
@@ -407,7 +407,7 @@ export const components = [
     memory: "16GB",
     length: 249,
     power: 160,
-    image: "/images/parts/gpu/9060xt16gb.jpg",
+    image: "/calvins-computer-creator/images/parts/gpu/9060xt16gb.jpg",
     retailers: [
       { site: "Newegg", priceCents: 36999 },
       { site: "Micro Center", priceCents: 36999 },
@@ -419,7 +419,7 @@ export const components = [
     memory: "16GB",
     length: 304,
     power: 180,
-    image: "/images/parts/gpu/5060ti16gb.jpg",
+    image: "/calvins-computer-creator/images/parts/gpu/5060ti16gb.jpg",
     retailers: [
       { site: "Newegg", priceCents: 42999 },
       { site: "Best Buy", priceCents: 42999 },
@@ -432,7 +432,7 @@ export const components = [
     memory: "16GB",
     length: 298,
     power: 304,
-    image: "/images/parts/gpu/9070xt16gb.jpg",
+    image: "/calvins-computer-creator/images/parts/gpu/9070xt16gb.jpg",
     retailers: [
       { site: "Newegg", priceCents: 69999 },
       { site: "Micro Center", priceCents: 69999 },
@@ -444,7 +444,7 @@ export const components = [
     memory: "16GB",
     length: 303,
     power: 300,
-    image: "/images/parts/gpu/5070ti16gb.jpg",
+    image: "/calvins-computer-creator/images/parts/gpu/5070ti16gb.jpg",
     retailers: [
       { site: "Newegg", priceCents: 78999 },
       { site: "Best Buy", priceCents: 79999 },
@@ -457,7 +457,7 @@ export const components = [
     memory: "16GB",
     length: 329,
     power: 360,
-    image: "/images/parts/gpu/508016gb.jpg",
+    image: "/calvins-computer-creator/images/parts/gpu/508016gb.jpg",
     retailers: [
       { site: "Amazon", priceCents: 99999 },
       { site: "Best Buy", priceCents: 99999 },
@@ -471,7 +471,7 @@ export const components = [
     memory: "32GB",
     length: 330,
     power: 575,
-    image: "/images/parts/gpu/509032gb.jpg",
+    image: "/calvins-computer-creator/images/parts/gpu/509032gb.jpg",
     retailers: [
       { site: "Amazon", priceCents: 249999 },
       { site: "Newegg", priceCents: 239999 },
@@ -487,7 +487,7 @@ export const components = [
     rating: "Bronze",
     modular: "No",
     size: "ATX",
-    image: "/images/parts/psu/powerSpec650.jpg",
+    image: "/calvins-computer-creator/images/parts/psu/powerSpec650.jpg",
     retailers: [
       { site: "Amazon", priceCents: 14999 },
       { site: "Newegg", priceCents: 14999 },
@@ -501,7 +501,7 @@ export const components = [
     rating: "Gold",
     modular: "Yes",
     size: "SFX",
-    image: "/images/parts/psu/v850sfx.jpg",
+    image: "/calvins-computer-creator/images/parts/psu/v850sfx.jpg",
     retailers: [
       { site: "Amazon", priceCents: 16399 },
       { site: "Newegg", priceCents: 15499 },
@@ -514,7 +514,7 @@ export const components = [
     rating: "Gold",
     modular: "Yes",
     size: "ATX",
-    image: "/images/parts/psu/a750gl.jpg",
+    image: "/calvins-computer-creator/images/parts/psu/a750gl.jpg",
     retailers: [
       { site: "Amazon", priceCents: 9999 },
       { site: "Newegg", priceCents: 9999 },
@@ -528,7 +528,7 @@ export const components = [
     rating: "Gold",
     modular: "Yes",
     size: "ATX",
-    image: "/images/parts/psu/rm850e.jpg",
+    image: "/calvins-computer-creator/images/parts/psu/rm850e.jpg",
     retailers: [
       { site: "Amazon", priceCents: 11499 },
       { site: "Newegg", priceCents: 11999 },
@@ -542,7 +542,7 @@ export const components = [
     rating: "Platinum",
     modular: "Yes",
     size: "ATX",
-    image: "/images/parts/psu/asus1000.jpg",
+    image: "/calvins-computer-creator/images/parts/psu/asus1000.jpg",
     retailers: [
       { site: "Amazon", priceCents: 11499 },
       { site: "Newegg", priceCents: 11999 },
@@ -556,7 +556,7 @@ export const components = [
     rating: "Platinum",
     modular: "Yes",
     size: "SFX",
-    image: "/images/parts/psu/sf1000.jpg",
+    image: "/calvins-computer-creator/images/parts/psu/sf1000.jpg",
     retailers: [
       { site: "Amazon", priceCents: 26249 },
       { site: "Newegg", priceCents: 23999 },
@@ -574,7 +574,7 @@ export const components = [
     aio: true,
     gpu: 410,
     psu: "ATX",
-    image: "/images/parts/case/corsairATX.jpg",
+    image: "/calvins-computer-creator/images/parts/case/corsairATX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 10499 },
       { site: "Newegg", priceCents: 10499 },
@@ -590,7 +590,7 @@ export const components = [
     aio: true,
     gpu: 410,
     psu: "ATX",
-    image: "/images/parts/case/nzxtATX.jpg",
+    image: "/calvins-computer-creator/images/parts/case/nzxtATX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 8999 },
       { site: "Newegg", priceCents: 9899 },
@@ -607,7 +607,7 @@ export const components = [
     aio: true,
     gpu: 365,
     psu: "ATX",
-    image: "/images/parts/case/fractalMATX.jpg",
+    image: "/calvins-computer-creator/images/parts/case/fractalMATX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 12079 },
       { site: "Newegg", priceCents: 11199 },
@@ -622,7 +622,7 @@ export const components = [
     aio: true,
     gpu: 415,
     psu: "ATX",
-    image: "/images/parts/case/lianliMATX.jpg",
+    image: "/calvins-computer-creator/images/parts/case/lianliMATX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 8999 },
       { site: "Newegg", priceCents: 8999 },
@@ -638,7 +638,7 @@ export const components = [
     aio: false,
     gpu: 322,
     psu: "SFX",
-    image: "/images/parts/case/fractalITX.jpg",
+    image: "/calvins-computer-creator/images/parts/case/fractalITX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 17999 },
       { site: "Newegg", priceCents: 21198 },
@@ -654,7 +654,7 @@ export const components = [
     aio: true,
     gpu: 322,
     psu: "SFX",
-    image: "/images/parts/case/lianliITX.jpg",
+    image: "/calvins-computer-creator/images/parts/case/lianliITX.jpg",
     retailers: [
       { site: "Amazon", priceCents: 15499 },
       { site: "Newegg", priceCents: 15499 },

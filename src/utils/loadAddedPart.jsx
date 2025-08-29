@@ -30,7 +30,7 @@ export function loadAddedPart(type, selectedParts, onDelete) {
           //   + Choose a {type}
           // </a>
           <Link className="choose-button" to={`/products/${preppedLink}`}>
-            + Choose a type
+            + Choose a {type}
           </Link>
         )}
       </td>
