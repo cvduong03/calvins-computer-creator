@@ -13,19 +13,17 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="/products/cpu" element={<CpuPage />} />
-        <Route path="/products/cpu-cooler" element={<CoolerPage />} />
-        <Route path="/products/motherboard" element={<MotherboardPage />} />
-        <Route path="/products/memory" element={<MemoryPage />} />
-        <Route path="/products/storage" element={<StoragePage />} />
-        <Route path="/products/graphics-card" element={<GpuPage />} />
-        <Route path="/products/power-supply" element={<PsuPage />} />
-        <Route path="/products/case" element={<CasePage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route index element={<HomePage />} />
+      <Route path="/products/cpu" element={<CpuPage />} />
+      <Route path="/products/cpu-cooler" element={<CoolerPage />} />
+      <Route path="/products/motherboard" element={<MotherboardPage />} />
+      <Route path="/products/memory" element={<MemoryPage />} />
+      <Route path="/products/storage" element={<StoragePage />} />
+      <Route path="/products/graphics-card" element={<GpuPage />} />
+      <Route path="/products/power-supply" element={<PsuPage />} />
+      <Route path="/products/case" element={<CasePage />} />
+    </Routes>
   );
 }
 
