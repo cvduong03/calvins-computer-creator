@@ -5,12 +5,6 @@ export function Header() {
     <>
       <div className="header">
         <div className="left-header">
-          {/* <a href="" className="link">
-            <img
-              className="c-logo"
-              src="/calvins-computer-creator/images/c-logo.png"
-            />
-          </a>
           <a href="" className="link">
             <img
               className="c-logo"
@@ -22,25 +16,13 @@ export function Header() {
               className="c-logo"
               src="/calvins-computer-creator/images/c-logo.png"
             />
-          </a> */}
-          <Link to="/">
+          </a>
+          <a href="" className="link">
             <img
               className="c-logo"
               src="/calvins-computer-creator/images/c-logo.png"
             />
-          </Link>
-          <Link to="/">
-            <img
-              className="c-logo"
-              src="/calvins-computer-creator/images/c-logo.png"
-            />
-          </Link>
-          <Link to="/">
-            <img
-              className="c-logo"
-              src="/calvins-computer-creator/images/c-logo.png"
-            />
-          </Link>
+          </a>
         </div>
 
         <div className="middle-header">
