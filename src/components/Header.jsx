@@ -5,14 +5,23 @@ export function Header() {
     <>
       <div className="header">
         <div className="left-header">
-          <a href="" className="link">
-            <img className="c-logo" src="/images/c-logo.png" />
+          <a href={import.meta.env.BASE_URL} className="link">
+            <img
+              className="c-logo"
+              src={`${import.meta.env.BASE_URL}images/c-logo.png`}
+            />
           </a>
-          <a href="" className="link">
-            <img className="c-logo" src="/images/c-logo.png" />
+          <a href={import.meta.env.BASE_URL} className="link">
+            <img
+              className="c-logo"
+              src={`${import.meta.env.BASE_URL}images/c-logo.png`}
+            />
           </a>
-          <a href="" className="link">
-            <img className="c-logo" src="/images/c-logo.png" />
+          <a href={import.meta.env.BASE_URL} className="link">
+            <img
+              className="c-logo"
+              src={`${import.meta.env.BASE_URL}images/c-logo.png`}
+            />
           </a>
         </div>
 
